@@ -25,7 +25,7 @@ font-weight: 800px;}
 
 h3{font-size: 20px;font-weight:700}
 
-h4{font-size: 18px;font-weight:700}
+h4{font-size: 18px;font-weight:500}
 
 p{font-size:20px;
 font-weight:200}
@@ -129,7 +129,7 @@ main {
 }
 
 .restaurants{
-    margin-left:2%;
+    margin-left:3%;
 }
 
 .restaurant_carte
@@ -138,7 +138,7 @@ main {
     min-width:300px;
     height:400px;
     border-radius:30px;
-    margin: 10px 0px 10px 0px;
+    margin: 20px 0px 20px 0px;
     box-shadow:5px 5px 5px $gris;
 
 }
@@ -173,6 +173,35 @@ main {
 }
 
 
+
+/* FOOTER*/@at-root
+footer{
+    background-color: darken($gris, 70%);
+    ul{
+        line-height:3px;
+        li{
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            color:white;
+            position:relative;
+                h4:nth-child(2){
+                    margin-left:15px;}                        
+           }
+            }}
+ 
+            li:nth-child(4){
+                padding-bottom:25px;
+            }
+            
+
+
+footer img{
+    margin :35px 0px 0px 40px;
+    filter : invert(100%);
+    -webkit-filter:invert(100%)
+}
+   
 
 
 

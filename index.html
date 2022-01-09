@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nouveau site OH MY FOOD</title>
         <link rel="normalize" href="./css/normalize.css"/>
-        <style>@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&display=swap'); </style>
+        <style>  @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;800&display=swap');
+            </style>
         <script src="https://kit.fontawesome.com/d93ddb798c.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/style.css" />
@@ -18,25 +19,35 @@
 <!--Header-->
 
     <header>
-        <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood"/>
+        <div class="header_top">
+            <img src="./images/logo/ohmyfood.png" alt="logo_ohmyfood"/>
+       
+        </div>
         <form method="post" action="page.php">
-            <label  for="ville"><span class="loupe"> <i class="fas fa-search"></i> </span> <span class="texte">Rechercher</span></label>
-            <i id="emplacement" class="fas fa-map-marker-alt"></i>
-            <input type="text" name="ville" id="ville" placeholder="Paris, Belleville" maxlength="30"/>
-            
+            <div class="input-container">                            
+                <i id="emplacement" class="fas fa-map-marker-alt"></i>
+                <input type="text" name="ville" id="ville" placeholder="Paris, Belleville" maxlength="30"/>
+            </div>
         </form>
 
 
     </header>
 
-<main>
+    
+
+    <!--premiere section : CTA-->
     <section class="cta">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-    <btn class="cta_btn">Explorer nos restaurants</btn>
+    <btn class="cta_btn">
+        
+        <input type="submit" value="  Explorer nos restaurants  "/>
+    </btn>
     </section>
-
-
+<br/>
+<br/>
+<main>
+<!--deuxieme section : fonctionnement-->
     <section class="fonctionnement">
         <h2>Fonctionnement</h2>
             <div class="fonctionnement_etape">
@@ -45,7 +56,7 @@
                 </div>
                 <div class="fonctionnement_etape--txt">
                     <i class="fas fa-mobile-alt"></i>
-                    <p>Choisissez un restaurant</p> 
+                    <h4>Choisissez un restaurant</h4> 
                 </div>
             </div>
 
@@ -53,26 +64,31 @@
 
             <div class="fonctionnement_etape">
                 <div class="fonctionnement_etape--numero">
-                    <p>1</p>
+                    <p>2</p>
                 </div>
                 <div class="fonctionnement_etape--txt">
                     <i class="fas fa-list-ul"></i>
-                    <p>Composez votre menu</p> 
+                    <h4>Composez votre menu</h4> 
                 </div>
             </div>
 
             <div class="fonctionnement_etape">
                 <div class="fonctionnement_etape--numero">
-                    <p>1</p>
+                    <p>3</p>
                 </div>
                 <div class="fonctionnement_etape--txt">
                     <i class="fas fa-mobile-alt"></i>
-                    <p>Dégustez au restaurant</p> 
+                    <h4>Dégustez au restaurant</h4> 
                 </div>
             </div>
+<br/>
+<br/>
+<br/>
 
-
+<!--troisieme section : cartes-restaurants-->
         <section class="restaurants">
+
+            <h2>Restaurants</h2>
 
             <div class="restaurant_carte">
                 <div class="restaurant_carte--img">
@@ -80,6 +96,8 @@
                 </div>
                 <div class="restaurant_carte--corps">
                     <div class="carte_corps--txt">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
                     </div>
                     <div class="carte_corps--coeur">
                     </div>
@@ -92,6 +110,8 @@
                 </div>
                 <div class="restaurant_carte--corps">
                     <div class="carte_corps--txt">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
                     </div>
                     <div class="carte_corps--coeur">
                     </div>
@@ -104,6 +124,8 @@
                 </div>
                 <div class="restaurant_carte--corps">
                     <div class="carte_corps--txt">
+                        <h3>A la française</h3>
+                        <p>Cité Rouge</p>
                     </div>
                     <div class="carte_corps--coeur">
                     </div>
@@ -116,6 +138,8 @@
                 </div>
                 <div class="restaurant_carte--corps">
                     <div class="carte_corps--txt">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
                     </div>
                     <div class="carte_corps--coeur">
                     </div>
@@ -127,14 +151,14 @@
 </main>
 
 
-
+<!--footer-->
 <footer>
     <img src="images/logo/ohmyfood@2x.svg" alt= "logo"/>
     <ul>
-        <li><i class="fas fa-utensils"></i>  Proposer un restaurant</li>
-        <li> <i class="fas fa-hands-helping"></i>  Devenir partenaire</li>
-        <li>Mentions légales</li>
-        <li>Contact</li>
+        <li><i class="fas fa-utensils"></i>  <h4>Proposer un restaurant</h4></li>
+        <li> <i class="fas fa-hands-helping"></i><h4>  Devenir partenaire</h4></li>
+        <li><h4>Mentions légales</h4></li>
+        <li><h4>Contact</h4></li>
     </ul>
 </footer>
 

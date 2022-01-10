@@ -50,8 +50,8 @@ font-weight:200}
   
   .input-container > i {
     position: absolute;
-    top: 35%;
-    left: 20%;
+    top: 36%;
+    left: 15%;
     padding-left: 30px;
   }
   
@@ -177,8 +177,13 @@ font-weight:200}
     margin: auto;
     margin-bottom:15px;
     box-shadow: 5px 7px 5px darken($gris,10%);
-
+    a {
+        text-decoration:none;
+        color:black;
+    }
 }
+
+
 
 .restaurant_carte--img
 {
@@ -300,9 +305,8 @@ footer img{
          }
 
 
-    .input-container{
+.input-container{
         input {
-        
         font-size:18px;
         Border-radius:25px;
         border-style:none;
@@ -312,6 +316,32 @@ footer img{
         }
       }
 
-      
+      .input-container > i {
+        position: absolute;
+        top: 35%;
+        left: 0%;
+        padding-left: 30px;
+      }
+     
+.fonctionnement_etape{
+          width:400px;
+          margin:auto;
+      }
+
+.fonctionnement h2, .restaurants h2
+      {
+    margin-left:40%;
+} 
+
+.conteneur_restaurants {
+    display:flex;
+    flex-wrap:wrap;
+}
+.restaurant_carte{
+    max-width:450px;
+}
+
+
+
 
 }

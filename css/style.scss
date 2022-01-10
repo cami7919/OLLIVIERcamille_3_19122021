@@ -16,6 +16,7 @@ body
 
 $gris:rgb(219, 217, 217);
 $parme:rgb(175, 110, 219);
+$tendre:#32ebcc;
 
 h1{ font-size:30px;
 font-weight:800;}
@@ -192,6 +193,20 @@ font-weight:200}
     position:relative; 
     overflow:hidden; 
 }
+.restaurant_carte--img h3{
+color:darken($tendre,20%);
+border:1px transparent solid;
+background-color:$tendre;
+padding:2px 7px 2px 7px;
+position:absolute;
+left:330px;
+top:10px;
+}
+
+
+
+
+
 
 
 .restaurant_carte--img img
@@ -229,7 +244,7 @@ font-weight:200}
         font-size:25px;
             &:hover{
             font-weight:bold;
-            color:red;
+            color:$parme;
         }
     }
 }

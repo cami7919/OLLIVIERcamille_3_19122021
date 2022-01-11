@@ -10,7 +10,7 @@
 body
 {
     box-sizing:border-box;
-    font-family: "catamaran";
+    font-family: "catamaran", "Shrikhand";
     margin :5%;  
 }
 
@@ -27,6 +27,8 @@ font-weight: 800px;}
 h3{font-size: 20px;font-weight:700}
 
 h4{font-size: 18px;font-weight:500}
+
+h5{font-size:22px ; font-weight:300;}
 
 p{font-size:18px;
 font-weight:200}
@@ -356,7 +358,83 @@ footer img{
     max-width:450px;
 }
 
-
-
-
 }
+
+/*PAGE 1 RESTAURANT ALA FRANCAISE*/@at-root
+
+.header_toppage{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+    i{
+        font-size:40px;
+        font-weight:600;
+        position:relative;
+        top:12px;
+        right:10%;}
+    }
+
+.header_presentation{
+    .presentation_image{
+    position:relative;
+        img{
+        width:100%;
+        object-fit:cover;
+        }
+        .presentation_txt{
+        width:99%;
+        border:5px transparent solid;
+        border-radius:55px;
+        background-color:lighten($gris,2%);
+        display:flex;
+        justify-content:space-between;
+        padding:40px 0px 25px 0px;
+        position:absolute;
+        top:280px;
+            .restaurant_nom{
+            font-family:Shrikhand;
+            font-size:45px;
+            font-weight:600;
+            padding-left:25px;
+            }
+            i{
+            font-size:50px;
+            padding-right:45px;}
+            }
+        }
+    }
+
+
+body{
+    background-color:lighten($gris,2%)}
+
+section h5{
+    border-bottom:3px $tendre solid;
+    width:45px;
+}    
+
+
+ .menu article{
+     border:2px white solid;
+     background-color:white;
+     border-radius :20px;
+     margin-bottom:20px;
+     padding:0px 20px 0px 20px;
+     h2{
+        margin-bottom:0px} 
+    .plat_details{
+         display:flex;
+         justify-content: space-between;                
+        p, h3{
+             margin-top:0px;}
+           
+     } }     
+     
+  
+ 
+ 
+ .restaurant_CTA{
+     text-align:center;
+     input{
+        padding:0px 35px 0px 35px;}
+ }

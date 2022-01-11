@@ -2,7 +2,7 @@
 /*communs*/
 body {
   box-sizing: border-box;
-  font-family: "catamaran";
+  font-family: "catamaran", "Shrikhand";
   margin: 5%;
 }
 
@@ -24,6 +24,11 @@ h3 {
 h4 {
   font-size: 18px;
   font-weight: 500;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: 300;
 }
 
 p {
@@ -280,4 +285,81 @@ footer img {
   .restaurant_carte {
     max-width: 450px;
   }
+}
+/*PAGE 1 RESTAURANT ALA FRANCAISE*/
+.header_toppage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.header_toppage i {
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  top: 12px;
+  right: 10%;
+}
+
+.header_presentation .presentation_image {
+  position: relative;
+}
+.header_presentation .presentation_image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header_presentation .presentation_image .presentation_txt {
+  width: 99%;
+  border: 5px transparent solid;
+  border-radius: 55px;
+  background-color: #e0dede;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px 25px 0px;
+  position: absolute;
+  top: 280px;
+}
+.header_presentation .presentation_image .presentation_txt .restaurant_nom {
+  font-family: Shrikhand;
+  font-size: 45px;
+  font-weight: 600;
+  padding-left: 25px;
+}
+.header_presentation .presentation_image .presentation_txt i {
+  font-size: 50px;
+  padding-right: 45px;
+}
+
+body {
+  background-color: #e0dede;
+}
+
+section h5 {
+  border-bottom: 3px #32ebcc solid;
+  width: 45px;
+}
+
+.menu article {
+  border: 2px white solid;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 0px 20px 0px 20px;
+}
+.menu article h2 {
+  margin-bottom: 0px;
+}
+.menu article .plat_details {
+  display: flex;
+  justify-content: space-between;
+}
+.menu article .plat_details p, .menu article .plat_details h3 {
+  margin-top: 0px;
+}
+
+.restaurant_CTA {
+  text-align: center;
+}
+.restaurant_CTA input {
+  padding: 0px 35px 0px 35px;
 }/*# sourceMappingURL=style.css.map */

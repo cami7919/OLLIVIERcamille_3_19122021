@@ -2,7 +2,7 @@
 /*communs*/
 body {
   box-sizing: border-box;
-  font-family: "catamaran", "Shrikhand";
+  font-family: "roboto";
   margin: 0px;
 }
 
@@ -33,7 +33,7 @@ h5 {
 
 p {
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 /* header */
@@ -93,7 +93,7 @@ p {
   background-image: radial-gradient(circle at 50% -20.71%, #ff7f85 0, #ff748c 8.33%, #ff6994 16.67%, #ff5d9c 25%, #ff52a4 33.33%, #ff47ad 41.67%, #f23cb5 50%, #e234be 58.33%, #cf32c8 66.67%, #b935d2 75%, #9f3bdb 83.33%, #7e42e5 91.67%, #514aed 100%);
   border-radius: 27px;
   border-style: none;
-  border-color: #af6edb;
+  border-color: #9356DC;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -120,9 +120,9 @@ p {
   z-index: 2;
 }
 .fonctionnement .fonctionnement_etape .fonctionnement_etape--numero p {
-  border: 1px #af6edb solid;
+  border: 1px #9356DC solid;
   color: white;
-  background-color: #af6edb;
+  background-color: #9356DC;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -152,7 +152,7 @@ p {
 }
 
 .fonctionnement_etape:nth-child(4) i {
-  color: #af6edb;
+  color: #9356DC;
   font-size: 20px;
 }
 
@@ -187,9 +187,9 @@ p {
 }
 
 .restaurant_carte--img h3 {
-  color: #10a78e;
+  color: #4acbab;
   border: 1px transparent solid;
-  background-color: #32ebcc;
+  background-color: #99E2D0;
   padding: 2px 7px 2px 7px;
   position: absolute;
   left: 65%;
@@ -238,7 +238,7 @@ p {
 }
 .carte_corps--coeur i:hover {
   font-weight: bold;
-  color: #af6edb;
+  color: #9356DC;
 }
 
 /* FOOTER*/
@@ -269,52 +269,6 @@ footer img {
   -webkit-filter: invert(100%);
 }
 
-/*   VERSION TABLETTE ET DESKTOP */
-@media screen and (min-width: 601px) {
-  .header_top {
-    margin: 20px 0px 100px 0px;
-  }
-
-  .input-container {
-    position: relative;
-    width: 40%;
-    margin: auto;
-  }
-
-  .input-container input {
-    font-size: 18px;
-    Border-radius: 25px;
-    border-style: none;
-    border-color: rgba(192, 191, 191, 0.952);
-    border-top: 4px rgba(192, 191, 191, 0.952) solid;
-    height: 60px;
-  }
-
-  .input-container > i {
-    position: absolute;
-    top: 35%;
-    left: 0%;
-    padding-left: 30px;
-  }
-
-  .fonctionnement_etape {
-    width: 400px;
-    margin: auto;
-  }
-
-  .fonctionnement h2, .restaurants h2 {
-    margin-left: 40%;
-  }
-
-  .conteneur_restaurants {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .restaurant_carte {
-    max-width: 450px;
-  }
-}
 /*PAGE 1 RESTAURANT ALA FRANCAISE*/
 .header_toppage {
   display: flex;
@@ -389,7 +343,7 @@ body {
   margin-bottom: 40px;
   margin-top: 40px;
   margin-left: 2%;
-  border-bottom: 3px #32ebcc solid;
+  border-bottom: 3px #99E2D0 solid;
   width: 45px;
   font-weight: 300;
 }
@@ -399,4 +353,51 @@ body {
 }
 .restaurant_CTA input {
   padding: 0px 35px 0px 35px;
+}
+
+/*   VERSION TABLETTE ET DESKTOP */
+@media screen and (min-width: 601px) {
+  .header_top {
+    margin: 20px 0px 100px 0px;
+  }
+
+  .input-container {
+    position: relative;
+    width: 40%;
+    margin: auto;
+  }
+
+  .input-container input {
+    font-size: 18px;
+    border-radius: 25px;
+    border-style: none;
+    border-color: rgba(192, 191, 191, 0.952);
+    border-top: 4px rgba(192, 191, 191, 0.952) solid;
+    height: 60px;
+  }
+
+  .input-container > i {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    padding-left: 30px;
+  }
+
+  .fonctionnement_etape {
+    width: 400px;
+    margin: auto;
+  }
+
+  .fonctionnement h2, .restaurants h2 {
+    margin-left: 40%;
+  }
+
+  .conteneur_restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .restaurant_carte {
+    max-width: 450px;
+  }
 }/*# sourceMappingURL=style.css.map */

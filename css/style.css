@@ -90,7 +90,8 @@ p {
 }
 
 .cta_btn input {
-  background-image: radial-gradient(circle at 50% -20.71%, #ff7f85 0, #ff748c 8.33%, #ff6994 16.67%, #ff5d9c 25%, #ff52a4 33.33%, #ff47ad 41.67%, #f23cb5 50%, #e234be 58.33%, #cf32c8 66.67%, #b935d2 75%, #9f3bdb 83.33%, #7e42e5 91.67%, #514aed 100%);
+  background: linear-gradient(#9356DC, #FF79DA);
+  box-shadow: 5px 5px 5px rgba(192, 191, 191, 0.952);
   border-radius: 27px;
   border-style: none;
   border-color: #9356DC;
@@ -125,6 +126,7 @@ p {
   background-color: #9356DC;
   width: 30px;
   height: 30px;
+  line-height: 30px;
   border-radius: 50%;
   text-align: center;
   font-weight: 700;
@@ -245,6 +247,18 @@ p {
 footer {
   background-color: rgba(13, 13, 13, 0.952);
 }
+footer a {
+  text-decoration: none;
+}
+footer i {
+  font-size: 20px;
+  padding-right: 0px;
+}
+footer img {
+  margin: 35px 0px 0px 40px;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
 footer ul {
   line-height: 3px;
 }
@@ -263,13 +277,7 @@ li:nth-child(4) {
   padding-bottom: 25px;
 }
 
-footer img {
-  margin: 35px 0px 0px 40px;
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
-}
-
-/*PAGE 1 RESTAURANT ALA FRANCAISE*/
+/*PAGE 1 RESTAURANT A LA FRANCAISE*/
 .header_toppage {
   display: flex;
   justify-content: center;
@@ -279,8 +287,12 @@ footer img {
 .header_toppage i {
   font-size: 40px;
   font-weight: 600;
-  transform: translate(-160%, 25%);
+  transform: translate(-30%, 25%);
   color: black;
+}
+
+body {
+  background-color: rgba(230, 230, 230, 0.952);
 }
 
 .header_presentation {
@@ -291,30 +303,29 @@ footer img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.header_presentation .presentation_txt {
+
+.presentation_txt {
   width: 99%;
   border: 5px transparent solid;
   border-radius: 55px;
   background-color: rgba(230, 230, 230, 0.952);
   display: flex;
   justify-content: space-between;
-  padding: 40px 0px 25px 0px;
+  padding: 25px 0px 25px 0px;
   position: absolute;
   top: 85%;
 }
-.header_presentation .presentation_txt .restaurant_nom {
+
+.restaurant_nom {
   font-family: Shrikhand;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 600;
   padding-left: 25px;
 }
-.header_presentation .presentation_txt i {
+
+i {
   font-size: 50px;
   padding-right: 45px;
-}
-
-body {
-  background-color: rgba(230, 230, 230, 0.952);
 }
 
 .plat_entrees, .plat_plats, .plat_desserts {
@@ -328,24 +339,26 @@ body {
   margin-bottom: 20px;
   padding: 0px 20px 0px 20px;
 }
-.menu article h2 {
-  margin-bottom: 0px;
-}
-.menu article .plat_details {
+
+.plat_details {
   display: flex;
   justify-content: space-between;
 }
-.menu article .plat_details p, .menu article .plat_details h3 {
+.plat_details p, .plat_details h3 {
   margin-top: 0px;
 }
 
 .entrees_titre, .plats_titre, .desserts_titre {
   margin-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 70px;
   margin-left: 2%;
   border-bottom: 3px #99E2D0 solid;
   width: 45px;
   font-weight: 300;
+}
+
+.plat {
+  font-size: 24px;
 }
 
 .restaurant_CTA {

@@ -16,6 +16,7 @@ body
 
 $gris:rgba(192, 191, 191, 0.952);
 $parme:#9356DC;
+$rose:#FF79DA;
 $tendre:#99E2D0;
 
 h1{ font-size:30px;
@@ -89,7 +90,8 @@ font-weight:300}
 
 .cta_btn{
     input{
-    background-image: radial-gradient(circle at 50% -20.71%, #ff7f85 0, #ff748c 8.33%, #ff6994 16.67%, #ff5d9c 25%, #ff52a4 33.33%, #ff47ad 41.67%, #f23cb5 50%, #e234be 58.33%, #cf32c8 66.67%, #b935d2 75%, #9f3bdb 83.33%, #7e42e5 91.67%, #514aed 100%);
+    background: linear-gradient($parme,$rose);
+    box-shadow:5px 5px 5px $gris;
     border-radius:27px; 
     border-style:none;
     border-color:$parme;
@@ -122,8 +124,9 @@ font-weight:300}
                 border:1px $parme solid;
                 color: white;
                 background-color:$parme;
-                width: 30px;
-                height: 30px;
+                width:30px;
+                height:30px;
+                line-height:30px;
                 -moz-border-radius: 50%;
                 -webkit-border-radius: 50%;
                 border-radius: 50%;
@@ -276,31 +279,36 @@ top:6%;
 /* FOOTER*/@at-root
 footer{
     background-color: darken($gris, 70%);
+    a{
+        text-decoration:none}
+    i{
+        font-size:20px;
+        padding-right:0px}  
+    img{
+        margin :35px 0px 0px 40px;
+        filter : invert(100%);
+        -webkit-filter:invert(100%)}
     ul{
         line-height:3px;
-        a{text-decoration:none}
         li{
             display:flex;
             justify-content:flex-start;
             align-items:center;
             color:white;
             position:relative;
-                h4:nth-child(2){
-                    margin-left:15px;}                        
-           }
-            }}
- 
-            li:nth-child(4){
-                padding-bottom:25px;
-            }
+            h4:nth-child(2){
+                margin-left:15px;}                        
+        }
+    }
+}
+
+li:nth-child(4){
+    padding-bottom:25px;
+}
             
 
 
-footer img{
-    margin :35px 0px 0px 40px;
-    filter : invert(100%);
-    -webkit-filter:invert(100%)
-}
+    
    
 
 
@@ -317,7 +325,7 @@ footer img{
     i{
         font-size:40px;
         font-weight:600;
-        transform:translate(-160%,25%);
+        transform:translate(-30%,25%);
         color:black;}
     }
 
@@ -339,14 +347,13 @@ body{
         display:flex;
         justify-content:space-between;
         padding:25px 0px 25px 0px;
-        
         position:absolute;
         top:85%;            
     }
    
 .restaurant_nom{
     font-family:Shrikhand;
-    font-size:30px;
+    font-size:35px;
     font-weight:600;
     padding-left:25px;
     }
@@ -368,11 +375,8 @@ body{
      background-color:white;
      border-radius :20px;
      margin-bottom:20px;
-     padding:0px 20px 0px 20px;
-     h2{           
-        margin-bottom:0px;
-        font-size:23px;
-        } 
+     padding:0px 20px 0px 20px;}
+    
 
 .plat_details{
     display:flex;
@@ -383,15 +387,18 @@ body{
            
      
   
-.entrees_titre, .plats_titre, .desserts_titre{
+.entrees_titre, .plats_titre, .desserts_titre
+{
       margin-bottom:40px;
       margin-top:70px;
       margin-left:2%;
       border-bottom:3px $tendre solid;
       width:45px;
       font-weight:300;}
-
       
+
+.plat
+{font-size:24px;}      
  
  
  .restaurant_CTA{
@@ -401,64 +408,63 @@ body{
  }
 
 
-
-
-
-
-
  /*   VERSION TABLETTE ET DESKTOP */
-@media screen and (min-width: 601px) {
+ @media screen and (min-width: 601px) {
 
-.header_top
-{  
-    margin : 20px 0px 100px 0px;
-}
-
-
-
-.input-container 
-{
-    position: relative;
-    width:40%;
-    margin:auto;
-}
-
-
-.input-container{
-    input {
-    font-size:18px;
-    border-radius:25px;
-    border-style:none;
-    border-color:$gris;
-    border-top:(4px $gris solid);
-    height:60px;
+    .header_top
+    {  
+        margin : 20px 0px 100px 0px;
     }
-}
+    
+    
+    
+    .input-container 
+    {
+        position: relative;
+        width:40%;
+        margin:auto;
+    }
+    
+    
+    .input-container{
+        input {
+        font-size:18px;
+        border-radius:25px;
+        border-style:none;
+        border-color:$gris;
+        border-top:(4px $gris solid);
+        height:60px;
+        }
+    }
+    
+    .input-container > i {
+        position: absolute;
+        top: 35%;
+        left: 0%;
+        padding-left: 30px;
+    }
+         
+    .fonctionnement_etape{
+        width:400px;
+        margin:auto;
+    }
+    
+    .fonctionnement h2,.restaurants h2{
+       
+        margin-left:40%;
+    } 
+    
+    .conteneur_restaurants {
+        display:flex;
+        flex-wrap:wrap;
+    }
+    
+    .restaurant_carte{
+        max-width:450px;
+    }
+    
+    }
 
-.input-container > i {
-    position: absolute;
-    top: 35%;
-    left: 0%;
-    padding-left: 30px;
-}
-     
-.fonctionnement_etape{
-    width:400px;
-    margin:auto;
-}
 
-.fonctionnement h2,.restaurants h2{
-   
-    margin-left:40%;
-} 
 
-.conteneur_restaurants {
-    display:flex;
-    flex-wrap:wrap;
-}
 
-.restaurant_carte{
-    max-width:450px;
-}
-
-}

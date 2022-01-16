@@ -101,6 +101,10 @@ p {
   height: 60px;
   margin: 15px;
 }
+.cta_btn input:hover {
+  background: linear-gradient(#ae80e5, #fface8);
+  box-shadow: 5px 5px 5px rgba(167, 165, 165, 0.952);
+}
 
 /*  section FONCTIONNEMENT */
 .fonctionnement {

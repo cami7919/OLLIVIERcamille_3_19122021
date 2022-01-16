@@ -386,7 +386,9 @@ body{
     display:flex;
     justify-content: space-between;                
     p,h3{
-        margin-top:0px;}
+        margin-top:0px;
+        overflow: hidden;
+        text-overflow: ellipsis; }
  }    
            
      
@@ -402,16 +404,43 @@ body{
       
 
 .plat
-{font-size:24px;}      
+{
+    font-size:24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }  
+
+
+
+
+
+.plat_rond{
+    display:flex;
+    justify-content:space-between;}
+
+.rond{
+    width:40px;
+    height:40px;
+    border: 5px solid transparent;
+    border-radius:50px;
+    transform:translate(0%, 0%);
+    
+}
+
 
 article{
     border-left: 0 solid transparent;
     transition: all 700ms ease-in-out;
     &:active{
-      border-right:100px solid $tendre;
-      
+      border-right:100px solid $tendre; 
+    }
+    &:active .rond{
+        transform:translate(200%,60%);
+        border: 5px solid white;
     }
 }
+
+
 
 
  

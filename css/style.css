@@ -350,6 +350,8 @@ i {
 }
 .plat_details p, .plat_details h3 {
   margin-top: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .entrees_titre, .plats_titre, .desserts_titre {
@@ -363,6 +365,21 @@ i {
 
 .plat {
   font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plat_rond {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rond {
+  width: 40px;
+  height: 40px;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  transform: translate(0%, 0%);
 }
 
 article {
@@ -371,6 +388,10 @@ article {
 }
 article:active {
   border-right: 100px solid #99E2D0;
+}
+article:active .rond {
+  transform: translate(200%, 60%);
+  border: 5px solid white;
 }
 
 .restaurant_CTA {

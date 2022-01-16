@@ -240,7 +240,7 @@ p {
   font-size: 25px;
   font-weight: none;
   color: black;
-  transition: all 3s;
+  transition: all 3s ease-in-out;
 }
 .carte_corps--coeur i:hover {
   font-weight: bold;
@@ -363,6 +363,14 @@ i {
 
 .plat {
   font-size: 24px;
+}
+
+article {
+  border-left: 0 solid transparent;
+  transition: all 700ms ease-in-out;
+}
+article:active {
+  border-right: 100px solid #99E2D0;
 }
 
 .restaurant_CTA {

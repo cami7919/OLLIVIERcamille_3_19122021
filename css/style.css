@@ -381,22 +381,28 @@ i {
   border-radius: 50px;
   transform: translate(0%, 0%);
 }
-.rond .checked {
+.rond img {
   position: relative;
   top: 8px;
   left: 4px;
+  transform: rotate(0deg);
 }
 
 article {
   border-left: 0 solid transparent;
-  transition: all 700ms ease-in-out;
 }
 article:active {
   border-right: 100px solid #99E2D0;
+  transition: 700ms ease-in-out;
 }
 article:active .rond {
   transform: translate(200%, 60%);
   border: 5px solid white;
+  transition: 700ms ease-in-out;
+}
+article:active .rond > img {
+  transform: rotate(720deg);
+  transition: 2s ease;
 }
 
 .restaurant_CTA {

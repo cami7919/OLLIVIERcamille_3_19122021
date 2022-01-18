@@ -424,23 +424,29 @@ body{
     border: 5px solid transparent;
     border-radius:50px;
     transform:translate(0%, 0%);
-     .checked{
+     img{
         position:relative;
         top:8px;
-        left:4px;} 
+        left:4px;
+        transform:rotate(0deg);} 
     }
 
 
 article{
     border-left: 0 solid transparent;
-    transition: all 700ms ease-in-out;
+    
     &:active{
-      border-right:100px solid $tendre; 
+      border-right:100px solid $tendre;
+      transition:700ms ease-in-out; 
     }
     &:active .rond{
         transform:translate(200%,60%);
-        border: 5px solid white;}
-    
+        border: 5px solid white;
+        transition:700ms ease-in-out; }
+    &:active .rond>img{
+        transform:rotate(720deg);
+        transition:2s ease;
+    }
         
     }
 

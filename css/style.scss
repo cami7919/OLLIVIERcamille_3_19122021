@@ -424,8 +424,11 @@ body{
     border: 5px solid transparent;
     border-radius:50px;
     transform:translate(0%, 0%);
-    
-}
+     .checked{
+        position:relative;
+        top:8px;
+        left:4px;} 
+    }
 
 
 article{
@@ -436,9 +439,11 @@ article{
     }
     &:active .rond{
         transform:translate(200%,60%);
-        border: 5px solid white;
+        border: 5px solid white;}
+    
+        
     }
-}
+
 
 
 

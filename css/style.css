@@ -381,6 +381,11 @@ i {
   border-radius: 50px;
   transform: translate(0%, 0%);
 }
+.rond .checked {
+  position: relative;
+  top: 8px;
+  left: 4px;
+}
 
 article {
   border-left: 0 solid transparent;

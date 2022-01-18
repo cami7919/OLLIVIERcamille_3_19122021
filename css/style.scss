@@ -41,7 +41,7 @@ font-weight:300}
     display:flex;
     width: 100%;
     justify-content: center;
-    padding : 10px 0px 20px 0px;
+    padding : 30px 0px 20px 0px;
     background-color:lighten($gris,15%);
 }
 
@@ -56,6 +56,7 @@ font-weight:300}
     position: absolute;
     top: 36%;
     left: 15%;
+    font-size:20px;
     padding-left: 30px;
     opacity:0.7;
   }
@@ -90,7 +91,7 @@ font-weight:300}
 
 .cta_btn{
     input{
-    background: linear-gradient($parme,$rose);
+    background: linear-gradient($rose,$parme);
     box-shadow:5px 5px 5px $gris;
     border-radius:27px; 
     border-style:none;
@@ -158,14 +159,17 @@ font-weight:300}
 .fonctionnement_etape:nth-child(-1n+3){
     i{
         color:darken($gris,40%);
-        font-size:20px;}
+        font-size:20px;
+        padding-left:20px;
+        padding-right:0px;}
 }
 
 .fonctionnement_etape:nth-child(4){
     i{
         color:$parme;
         font-size:20px;
-}
+        padding-left:20px;
+        padding-right:0px;}
 }
 
 
@@ -324,12 +328,13 @@ li:nth-child(4){
 .header_toppage{
     display:flex;
     justify-content:center;
-    padding-top:10px;
+    padding-top:30px;
+    
     margin-bottom:20px;
     i{
         font-size:40px;
         font-weight:600;
-        transform:translate(-30%,25%);
+        transform:translate(-30%,5%);
         color:black;}
     }
 
@@ -375,7 +380,7 @@ body{
 
 
  .menu article{
-     border:2px white solid;
+     border:1px transparent solid;
      background-color:white;
      border-radius :20px;
      margin-bottom:20px;
@@ -465,9 +470,10 @@ article{
  /*   VERSION TABLETTE ET DESKTOP */
  @media screen and (min-width: 601px) {
 
-    .header_top
-    {  
-        margin : 20px 0px 100px 0px;
+.header_top{
+    margin:40px 0px 80px 0px;
+    img{
+        transform:scale(2);}
     }
     
     
@@ -495,7 +501,7 @@ article{
         position: absolute;
         top: 35%;
         left: 0%;
-        padding-left: 30px;
+        padding-left: 20%;
     }
          
     .fonctionnement_etape{
@@ -506,6 +512,7 @@ article{
     .fonctionnement h2,.restaurants h2{
        
         margin-left:40%;
+        margin-bottom:50px;
     } 
     
     .conteneur_restaurants {
@@ -520,9 +527,12 @@ article{
 /* PAGE1  VERSION TABLETTE ET DESKTOP */@at-root
 
 .header_toppage{
+    margin-top:30px;
+    margin-bottom:50px;
     i{
-        transform:translate(-100%,25%);
-    }
+        transform:translate(-100%,25%);}
+    img{
+        transform:scale(1.6);}
 }
 
 .header_presentation{

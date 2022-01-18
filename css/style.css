@@ -41,7 +41,7 @@ p {
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 10px 0px 20px 0px;
+  padding: 30px 0px 20px 0px;
   background-color: rgba(230, 230, 230, 0.952);
 }
 
@@ -54,6 +54,7 @@ p {
   position: absolute;
   top: 36%;
   left: 15%;
+  font-size: 20px;
   padding-left: 30px;
   opacity: 0.7;
 }
@@ -90,7 +91,7 @@ p {
 }
 
 .cta_btn input {
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 5px 5px 5px rgba(192, 191, 191, 0.952);
   border-radius: 27px;
   border-style: none;
@@ -155,11 +156,15 @@ p {
 .fonctionnement_etape:nth-child(-1n+3) i {
   color: rgba(90, 89, 89, 0.952);
   font-size: 20px;
+  padding-left: 20px;
+  padding-right: 0px;
 }
 
 .fonctionnement_etape:nth-child(4) i {
   color: #9356DC;
   font-size: 20px;
+  padding-left: 20px;
+  padding-right: 0px;
 }
 
 /* Section Restaurants  */
@@ -285,13 +290,13 @@ li:nth-child(4) {
 .header_toppage {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 30px;
   margin-bottom: 20px;
 }
 .header_toppage i {
   font-size: 40px;
   font-weight: 600;
-  transform: translate(-30%, 25%);
+  transform: translate(-30%, 5%);
   color: black;
 }
 
@@ -337,7 +342,7 @@ i {
 }
 
 .menu article {
-  border: 2px white solid;
+  border: 1px transparent solid;
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -415,7 +420,10 @@ article:active .rond > img {
 /*   VERSION TABLETTE ET DESKTOP */
 @media screen and (min-width: 601px) {
   .header_top {
-    margin: 20px 0px 100px 0px;
+    margin: 40px 0px 80px 0px;
+  }
+  .header_top img {
+    transform: scale(2);
   }
 
   .input-container {
@@ -437,7 +445,7 @@ article:active .rond > img {
     position: absolute;
     top: 35%;
     left: 0%;
-    padding-left: 30px;
+    padding-left: 20%;
   }
 
   .fonctionnement_etape {
@@ -447,6 +455,7 @@ article:active .rond > img {
 
   .fonctionnement h2, .restaurants h2 {
     margin-left: 40%;
+    margin-bottom: 50px;
   }
 
   .conteneur_restaurants {
@@ -459,8 +468,15 @@ article:active .rond > img {
   }
 
   /* PAGE1  VERSION TABLETTE ET DESKTOP */
+  .header_toppage {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
   .header_toppage i {
     transform: translate(-100%, 25%);
+  }
+  .header_toppage img {
+    transform: scale(1.6);
   }
 
   .header_presentation {

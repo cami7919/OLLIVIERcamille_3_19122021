@@ -516,8 +516,42 @@ article{
     .restaurant_carte{
         max-width:450px;
     }
-    
+
+/* PAGE1  VERSION TABLETTE ET DESKTOP */@at-root
+
+.header_toppage{
+    i{
+        transform:translate(-100%,25%);
     }
+}
+
+.header_presentation{
+    position:relative;
+    max-width:610px;
+    margin:auto;}
+       
+.menu article{
+    max-width:800px;
+    margin:auto;
+    margin-bottom:5%;
+}
+
+.entrees_titre, .plats_titre, .desserts_titre
+{
+    margin-left:15%;
+}
+
+.restaurant_CTA{
+    margin-bottom:150px;
+    margin-top:50px;
+    input{
+        transform:scale(1.3);
+    }
+}
+
+
+}
+    
 
 
 

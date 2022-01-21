@@ -399,16 +399,20 @@ li:nth-child(4) {
 
 /*PAGE 1 RESTAURANT A LA FRANCAISE*/
 .header_toppage {
-  display: flex;
-  justify-content: center;
   padding-top: 30px;
   margin-bottom: 20px;
 }
+.header_toppage img {
+  display: block;
+  margin: auto;
+}
 .header_toppage i {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
-  transform: translate(-30%, 5%);
   color: black;
+  opacity: 1;
+  left: 3%;
+  top: 5%;
 }
 
 body {
@@ -595,7 +599,8 @@ article:active .rond > img {
     margin-bottom: 50px;
   }
   .header_toppage i {
-    transform: translate(-100%, 25%);
+    font-size: 35px;
+    top: 9%;
   }
   .header_toppage img {
     transform: scale(1.6);
@@ -605,6 +610,13 @@ article:active .rond > img {
     position: relative;
     max-width: 610px;
     margin: auto;
+  }
+  .header_presentation .restaurant_nom {
+    font-size: 45px;
+  }
+
+  .plat_entrees {
+    padding-top: 60px;
   }
 
   .menu article {

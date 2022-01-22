@@ -63,13 +63,15 @@ font-weight:300}
     z-index:2;
     background-color:$tendre;
     display:flex;
+    flex-direction:column;
+    align-items:center;
     justify-content:center;
     align-items:center;
     &_lettre{
         color:#484848;
-        font-size:88px;
-        letter-spacing:15px;
-        margin-bottom:150px;
+        font-size:50px;
+        letter-spacing:1px;
+        margin-bottom:15px;
         animation: flash 1s ease infinite;
         @for $i from 1 through 10{
             &--#{$i}{
@@ -465,7 +467,6 @@ body{
 
 
  .menu article{
-     border:1px transparent solid;
      background-color:white;
      border-radius :20px;
      margin-bottom:20px;
@@ -506,7 +507,7 @@ body{
 
 
 
-
+ /*animation des plats*/
 .plat_rond{
     display:flex;
     justify-content:space-between;}
@@ -526,8 +527,7 @@ body{
 
 
 article{
-    border-left: 0 solid transparent;
-    
+        
     &:active{
       border-right:100px solid $tendre;
       transition:700ms ease-in-out; 
@@ -543,7 +543,7 @@ article{
         
     }
 
-
+/*fin de l'animation des plats*/
 
 
 
@@ -593,6 +593,63 @@ article{
 
  /*   VERSION TABLETTE  */
  @media screen and (min-width:600px){
+
+ /* loading spinner*/
+ .accueil{
+    height:100%;
+    width:100%;
+}
+
+.loader{
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index:2;
+    background-color:$tendre;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    &_lettre{
+        color:#484848;
+        font-size:60px;
+        letter-spacing:15px;
+        margin-bottom:150px;
+        animation: flash 1s ease infinite;
+        @for $i from 1 through 10{
+            &--#{$i}{
+                animation-delay:($i*0.1s);
+            }
+        }
+    }}
+
+@keyframes flash {
+    0%{
+        color:$rose;
+        text-shadow: 0 0 7px $rose;
+    }
+    90%{
+        color:#484848;
+        text-shadow:none;
+    }
+    100%{
+        color:$rose;
+        text-shadow: 0 0 7px $rose;
+    }
+}
+
+.loader{
+    opacity:1;
+    transition:opacity 3s;
+    &:hover{
+        opacity:0;}
+    }
+
+
+
+
+
+
 
 .header_top{
     margin:40px 0px 80px 0px;
@@ -709,7 +766,62 @@ article{
  
 
 /*VERSION DESKTOP */
-@media(min-width:992px){}
+@media(min-width:992px){
+
+
+    /* loading spinner*/
+.accueil{
+    height:100%;
+    width:100%;
+}
+
+.loader{
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index:2;
+    background-color:$tendre;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    &_lettre{
+        color:#484848;
+        font-size:88px;
+        letter-spacing:15px;
+        margin-bottom:150px;
+        animation: flash 1s ease infinite;
+        @for $i from 1 through 10{
+            &--#{$i}{
+                animation-delay:($i*0.1s);
+            }
+        }
+    }}
+
+@keyframes flash {
+    0%{
+        color:$rose;
+        text-shadow: 0 0 7px $rose;
+    }
+    90%{
+        color:#484848;
+        text-shadow:none;
+    }
+    100%{
+        color:$rose;
+        text-shadow: 0 0 7px $rose;
+    }
+}
+
+.loader{
+    opacity:1;
+    transition:opacity 3s;
+    &:hover{
+        opacity:0;}
+    }
+
+
+}
 
 
 

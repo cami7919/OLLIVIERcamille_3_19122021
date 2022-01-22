@@ -381,6 +381,9 @@ footer img {
 }
 footer ul {
   line-height: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 footer ul li {
   display: flex;
@@ -430,21 +433,22 @@ body {
 
 .presentation_txt {
   width: 99%;
-  border: 5px transparent solid;
-  border-radius: 55px;
+  border: 1px transparent solid;
+  border-radius: 30px;
+  margin: auto;
   background-color: rgba(230, 230, 230, 0.952);
   display: flex;
   justify-content: space-between;
-  padding: 25px 0px 25px 0px;
+  padding: 25px 5px 25px 5px;
   position: absolute;
   top: 85%;
 }
 
 .restaurant_nom {
   font-family: Shrikhand;
-  font-size: 35px;
-  font-weight: 600;
-  padding-left: 25px;
+  font-size: 28px;
+  font-weight: 500;
+  padding-left: 5%;
 }
 
 > i {
@@ -462,6 +466,9 @@ body {
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 0px 20px 0px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .plat_details {
@@ -542,6 +549,21 @@ article:active .rond > img {
     padding-left: 20px;
     opacity: 0.7;
   }
+
+  /*Version smartphone PAGE1*/
+  .presentation_txt {
+    border-radius: 38px;
+  }
+  .presentation_txt .restaurant_nom {
+    font-family: Shrikhand;
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 5%;
+  }
+  .presentation_txt > i {
+    font-size: 50px;
+    padding-right: 45px;
+  }
 }
 /*   VERSION TABLETTE  */
 @media screen and (min-width: 600px) {
@@ -611,8 +633,18 @@ article:active .rond > img {
     max-width: 610px;
     margin: auto;
   }
-  .header_presentation .restaurant_nom {
+  .header_presentation .presentation_txt {
+    border-radius: 50px;
+  }
+  .header_presentation .presentation_txt .restaurant_nom {
+    font-family: Shrikhand;
     font-size: 45px;
+    font-weight: 600;
+    padding-left: 5%;
+  }
+  .header_presentation .presentation_txt .restaurant_nom > i {
+    font-size: 50px;
+    padding-right: 45px;
   }
 
   .plat_entrees {

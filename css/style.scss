@@ -377,6 +377,9 @@ footer{
         -webkit-filter:invert(100%)}
     ul{
         line-height:3px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
         li{
             display:flex;
             justify-content:flex-start;
@@ -431,21 +434,22 @@ body{
 
 .presentation_txt{
         width:99%;
-        border:5px transparent solid;
-        border-radius:55px;
+        border:1px transparent solid;
+        border-radius:30px;
+        margin:auto;
         background-color:lighten($gris,15%);
         display:flex;
         justify-content:space-between;
-        padding:25px 0px 25px 0px;
+        padding:25px 5px 25px 5px;
         position:absolute;
         top:85%;            
     }
    
 .restaurant_nom{
     font-family:Shrikhand;
-    font-size:35px;
-    font-weight:600;
-    padding-left:25px;
+    font-size:28px;
+    font-weight:500;
+    padding-left:5%;
     }
     >i{
     font-size:50px;
@@ -465,7 +469,10 @@ body{
      background-color:white;
      border-radius :20px;
      margin-bottom:20px;
-     padding:0px 20px 0px 20px;}
+     padding:0px 20px 0px 20px;
+     white-space:nowrap;
+     overflow:hidden;
+     text-overflow:ellipsis;}
     
 
 .plat_details{
@@ -562,7 +569,23 @@ article{
       }
 
 
+      /*Version smartphone PAGE1*/
+
+.presentation_txt{
+    border-radius:38px;
+    .restaurant_nom{
+    font-family:Shrikhand;
+    font-size:35px;
+    font-weight:600;
+    padding-left:5%;}
+    >i{
+    font-size:50px;
+    padding-right:45px;
+    }}
+    
       
+
+
     }
 
 
@@ -577,8 +600,7 @@ article{
         transform:scale(2);}
     }
     
-    
-    
+
     .input-container 
     {
         position: relative;
@@ -642,9 +664,21 @@ article{
     position:relative;
     max-width:610px;
     margin:auto;    
+    .presentation_txt{
+        border-radius:50px;
         .restaurant_nom{
-        font-size:45px;}
+        font-family:Shrikhand;
+        font-size:45px;
+        font-weight:600;
+        padding-left:5%;
+            >i{
+            font-size:50px;
+            padding-right:45px;}}
     }
+}
+
+
+
 
 .plat_entrees{
     padding-top:60px;

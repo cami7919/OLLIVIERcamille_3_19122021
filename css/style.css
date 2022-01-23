@@ -208,7 +208,7 @@ p {
   margin: 15px;
 }
 .cta_btn input:hover {
-  background: linear-gradient(#ae80e5, #fface8);
+  background: linear-gradient(#fface8, #ae80e5);
   box-shadow: 5px 5px 5px rgba(167, 165, 165, 0.952);
 }
 
@@ -361,13 +361,14 @@ i:last-child {
   color: #9356DC;
   font-weight: bold;
   opacity: 0;
-  transition: opacity 1.5s;
+  transition: opacity 3s;
   transform-origin: 50% bottom;
 }
 
 /* FOOTER*/
 footer {
   background-color: rgba(13, 13, 13, 0.952);
+  margin-top: 80px;
 }
 footer a {
   text-decoration: none;
@@ -445,17 +446,23 @@ body {
   position: absolute;
   top: 85%;
 }
+.presentation_txt .coeur i {
+  font-size: 30px;
+  font-weight: normal;
+  color: black;
+  padding-right: 45px;
+  opacity: 1;
+  z-index: 1;
+  right: 0%;
+  top: 30%;
+  left: 85%;
+}
 
 .restaurant_nom {
   font-family: Shrikhand;
   font-size: 28px;
   font-weight: 500;
   padding-left: 5%;
-}
-
-> i {
-  font-size: 50px;
-  padding-right: 45px;
 }
 
 .plat_entrees, .plat_plats, .plat_desserts {
@@ -534,6 +541,7 @@ article:active .rond > img {
 /*fin de l'animation des plats*/
 .restaurant_CTA {
   text-align: center;
+  margin: 30px 0px 30px 0px;
 }
 .restaurant_CTA input {
   padding: 0px 35px 0px 35px;
@@ -556,13 +564,19 @@ article:active .rond > img {
   }
   .presentation_txt .restaurant_nom {
     font-family: Shrikhand;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 600;
     padding-left: 5%;
   }
-  .presentation_txt > i {
-    font-size: 50px;
+  .presentation_txt .coeur i {
+    font-size: 30px;
+    font-weight: normal;
+    color: black;
     padding-right: 45px;
+    opacity: 1;
+    z-index: 1;
+    right: 0%;
+    top: 30%;
   }
 }
 /*   VERSION TABLETTE  */
@@ -745,9 +759,10 @@ article:active .rond > img {
     font-weight: 600;
     padding-left: 5%;
   }
-  .header_presentation .presentation_txt .restaurant_nom > i {
+  .header_presentation .presentation_txt .coeur i {
     font-size: 50px;
     padding-right: 45px;
+    top: 27%;
   }
 
   .plat_entrees {

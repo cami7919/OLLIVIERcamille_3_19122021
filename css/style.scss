@@ -172,7 +172,7 @@ font-weight:300}
     height:60px;
     margin:15px;
     &:hover{
-        background: linear-gradient(lighten($parme,10%),lighten($rose, 10%)); 
+        background: linear-gradient(lighten($rose,10%),lighten($parme, 10%)); 
         box-shadow:5px 5px 5px darken($gris, 10%);
         }
   } 
@@ -356,7 +356,7 @@ i:last-child{
         color:$parme;
         font-weight:bold;
         opacity:0;
-        transition:opacity 1.5s;
+        transition:opacity 3s;
         transform-origin:50% bottom;
     }
 
@@ -368,6 +368,7 @@ i:last-child{
 /* FOOTER*/@at-root
 footer{
     background-color: darken($gris, 70%);
+    margin-top:80px;
     a{
         text-decoration:none}
     i{
@@ -444,7 +445,19 @@ body{
         justify-content:space-between;
         padding:25px 5px 25px 5px;
         position:absolute;
-        top:85%;            
+        top:85%; 
+        .coeur{
+            i{
+            font-size:30px;
+            font-weight:normal;
+            color:black;
+            padding-right:45px;
+            opacity:1;
+            z-index:1;
+            right:0%;
+            top:30%;
+            left:85%;
+            }}           
     }
    
 .restaurant_nom{
@@ -453,10 +466,7 @@ body{
     font-weight:500;
     padding-left:5%;
     }
-    >i{
-    font-size:50px;
-    padding-right:45px;
-    }
+   
 
 
 
@@ -550,6 +560,7 @@ article{
  
  .restaurant_CTA{
      text-align:center;
+     margin:30px 0px 30px 0px;
      input{
         padding:0px 35px 0px 35px;}
  }
@@ -575,14 +586,21 @@ article{
     border-radius:38px;
     .restaurant_nom{
     font-family:Shrikhand;
-    font-size:35px;
+    font-size:32px;
     font-weight:600;
     padding-left:5%;}
-    >i{
-    font-size:50px;
-    padding-right:45px;
-    }}
-    
+    .coeur{
+        i{
+        font-size:30px;
+        font-weight:normal;
+        color:black;
+        padding-right:45px;
+        opacity:1;
+        z-index:1;
+        right:0%;
+        top:30%;
+        }}     
+}
       
 
 
@@ -727,10 +745,12 @@ article{
         font-family:Shrikhand;
         font-size:45px;
         font-weight:600;
-        padding-left:5%;
-            >i{
+        padding-left:5%;}
+        .coeur{
+            i{
             font-size:50px;
-            padding-right:45px;}}
+            padding-right:45px;
+            top:27%;}}
     }
 }
 

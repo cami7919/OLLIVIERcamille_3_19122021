@@ -134,13 +134,46 @@ p {
   }
 }
 .loader {
-  opacity: 1;
-  transition: opacity 3s;
-}
-.loader:hover {
-  opacity: 0;
+  -webkit-animation: loader 3s;
+          animation: loader 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+/*.loader    
+    opacity:1;
+    transition:opacity 3s;
+    &:hover{
+        opacity:0;}
+    }*/
+@-webkit-keyframes loader {
+  0%, 20%, 30%, 40%, 50%, 60% {
+    opacity: 1;
+  }
+  70%, 80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0, 8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0%, 20%, 30%, 40%, 50%, 60% {
+    opacity: 1;
+  }
+  70%, 80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0, 8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* header */
 .header_top {
   display: flex;
@@ -301,7 +334,16 @@ p {
   position: relative;
   overflow: hidden;
 }
-
+.restaurant_carte--img img {
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px 30px 0px 0px;
+}
 .restaurant_carte--img h3 {
   color: #4acbab;
   border: 1px transparent solid;
@@ -312,16 +354,6 @@ p {
   top: 6%;
 }
 
-.restaurant_carte--img img {
-  width: 100%;
-  position: absolute;
-  top: 1%;
-  left: 1%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 30px 30px 0px 0px;
-}
-
 .restaurant_carte--corps {
   display: flex;
   justify-content: space-between;
@@ -330,18 +362,16 @@ p {
   border-radius: 0px 0px 30px 30px;
   line-height: 12px;
 }
-
-.carte_corps--txt {
+.restaurant_carte--corps .carte_corps--txt {
   padding-left: 20px;
 }
-.carte_corps--txt h3 {
+.restaurant_carte--corps .carte_corps--txt h3 {
   margin-bottom: 10px;
 }
-.carte_corps--txt p {
+.restaurant_carte--corps .carte_corps--txt p {
   font-size: 18px;
 }
-
-.carte_corps--coeur {
+.restaurant_carte--corps .carte_corps--coeur {
   padding-right: 5%;
   position: relative;
   top: 20px;
@@ -349,11 +379,11 @@ p {
   color: black;
   font-size: 25px;
 }
-.carte_corps--coeur:hover i:last-child {
+.restaurant_carte--corps .carte_corps--coeur:hover i:last-child {
   opacity: 1;
 }
 
-i:last-child {
+.carte_corps--coeur i:last-child {
   position: absolute;
   top: 0;
   right: 46%;
@@ -405,8 +435,9 @@ li:nth-child(4) {
 
 /*PAGE 1 RESTAURANT A LA FRANCAISE*/
 .header_toppage {
-  padding-top: 30px;
   margin-bottom: 20px;
+  display: flex;
+  padding-top: 20px;
 }
 .header_toppage img {
   display: block;
@@ -416,9 +447,6 @@ li:nth-child(4) {
   font-size: 30px;
   font-weight: 600;
   color: black;
-  opacity: 1;
-  left: 3%;
-  top: 5%;
 }
 
 body {
@@ -478,12 +506,16 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.plat_details {
+.menu article .plat {
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu article .plat_details {
   display: flex;
   justify-content: space-between;
 }
-.plat_details p, .plat_details h3 {
+.menu article .plat_details p, .menu article .plat_details h3 {
   margin-top: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -498,12 +530,6 @@ body {
   font-weight: 300;
 }
 
-.plat {
-  font-size: 24px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /*animation des plats*/
 .plat_rond {
   display: flex;
@@ -513,7 +539,7 @@ body {
 .rond {
   width: 40px;
   height: 40px;
-  border: 5px solid transparent;
+  border: 5px solid white;
   border-radius: 50px;
   transform: translate(0%, 0%);
 }

@@ -181,7 +181,7 @@ p {
   width: 100%;
   justify-content: center;
   padding: 30px 0px 20px 0px;
-  background-color: rgba(230, 230, 230, 0.952);
+  background-color: white;
 }
 
 /* CTA */
@@ -193,10 +193,10 @@ p {
   width: 100%;
   font-size: 18px;
   color: black;
-  background-color: rgba(192, 191, 191, 0.952);
+  background-color: rgba(236, 230, 230, 0.979);
   border-style: none;
-  border-color: rgba(192, 191, 191, 0.952);
-  border-top: 4px rgba(167, 165, 165, 0.952) solid;
+  border-color: transparent;
+  box-shadow: 0px 4px 5px rgba(189, 186, 186, 0.979) inset;
   height: 60px;
 }
 .input_container input::-moz-placeholder {
@@ -224,14 +224,14 @@ p {
 
 .cta {
   text-align: center;
-  background-color: rgba(230, 230, 230, 0.952);
+  background-color: rgba(247, 244, 244, 0.979);
   padding-bottom: 50px;
   padding-top: 15px;
 }
 
 .cta_btn input {
   background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 5px 5px 5px rgba(192, 191, 191, 0.952);
+  box-shadow: 5px 5px 5px rgba(236, 230, 230, 0.979);
   border-radius: 27px;
   border-style: none;
   border-color: #9356DC;
@@ -243,7 +243,7 @@ p {
 }
 .cta_btn input:hover {
   background: linear-gradient(#fface8, #ae80e5);
-  box-shadow: 5px 5px 5px rgba(167, 165, 165, 0.952);
+  box-shadow: 5px 5px 5px rgba(214, 201, 201, 0.979);
 }
 
 /*  section FONCTIONNEMENT */
@@ -282,18 +282,18 @@ p {
   align-items: center;
   border: 1px transparent solid;
   border-radius: 25px;
-  box-shadow: 5px 7px 10px rgba(167, 165, 165, 0.952);
+  box-shadow: 5px 7px 10px rgba(214, 201, 201, 0.979);
   padding: 0px 10px 0px 10px;
   width: 95%;
   margin-left: 10px;
   margin-bottom: 15px;
-  background-color: rgba(230, 230, 230, 0.952);
+  background-color: rgba(247, 244, 244, 0.979);
   position: relative;
   top: 6px;
 }
 
 .fonctionnement_etape:nth-child(-1n+3) i {
-  color: rgba(90, 89, 89, 0.952);
+  color: rgba(148, 114, 114, 0.979);
   font-size: 20px;
   padding-left: 20px;
   padding-right: 0px;
@@ -308,7 +308,7 @@ p {
 
 /* Section Restaurants  */
 .restaurants {
-  background-color: rgba(230, 230, 230, 0.952);
+  background-color: rgba(247, 244, 244, 0.979);
 }
 .restaurants h2 {
   padding: 25px 0px 0px 20px;
@@ -322,7 +322,7 @@ p {
   border-radius: 30px;
   margin: auto;
   margin-bottom: 15px;
-  box-shadow: 5px 7px 5px rgba(167, 165, 165, 0.952);
+  box-shadow: 5px 7px 5px rgba(214, 201, 201, 0.979);
 }
 .restaurant_carte a {
   text-decoration: none;
@@ -398,7 +398,7 @@ p {
 
 /* FOOTER*/
 footer {
-  background-color: rgba(13, 13, 13, 0.952);
+  background-color: rgba(62, 47, 47, 0.979);
   margin-top: 80px;
 }
 footer a {
@@ -451,7 +451,7 @@ li:nth-child(4) {
 }
 
 body {
-  background-color: rgba(230, 230, 230, 0.952);
+  background-color: rgba(247, 244, 244, 0.979);
 }
 
 .header_presentation {
@@ -468,7 +468,7 @@ body {
   border: 1px transparent solid;
   border-radius: 30px;
   margin: auto;
-  background-color: rgba(230, 230, 230, 0.952);
+  background-color: rgba(247, 244, 244, 0.979);
   display: flex;
   justify-content: space-between;
   padding: 25px 5px 25px 5px;
@@ -494,6 +494,36 @@ body {
   padding-left: 5%;
 }
 
+/* Menu : animation@at-root
+.menu{
+    opacity:0;
+    animation:apparition 6s;
+    animation-fill-mode:forwards;}
+
+
+
+
+@keyframes apparition{
+    0%{ 
+        .plat_entrees, .plat_plats, .plat_desserts
+        {opacity:0.0;}
+
+    }
+    33%{
+        .plat_entrees{opacity:1.0;}  
+        .plat_plats, .plat_desserts{opacity:0.0;}
+    }
+    66%{
+        .plat_entrees, .plat_plats{opacity:1.0;}
+        .plat_desserts{opacity:0.0;}
+    }
+    100%{
+        .plat_entrees, .plat_plats, .plat_desserts
+            {opacity:1.0;}
+
+    }
+}
+*/
 .plat_entrees, .plat_plats, .plat_desserts {
   padding-top: 40px;
 }
@@ -728,8 +758,8 @@ article:active .rond > img {
     font-size: 18px;
     border-radius: 25px;
     border-style: none;
-    border-color: rgba(192, 191, 191, 0.952);
-    border-top: 4px rgba(192, 191, 191, 0.952) solid;
+    border-color: rgba(236, 230, 230, 0.979);
+    border-top: 4px rgba(236, 230, 230, 0.979) solid;
     height: 60px;
   }
 

@@ -453,36 +453,24 @@ body{
     }
    
 
-/* Menu : animation@at-root
-.menu{
+/* Menu : animation */@at-root
+.article{
     opacity:0;
     animation:apparition 6s;
-    animation-fill-mode:forwards;}
-
+    animation-fill-mode:forwards;
+    @for $i from 1 through 9{
+    &--#{$i}{
+        animation-delay:($i*0.2s);}
+        }}
 
 
 
 @keyframes apparition{
-    0%{ 
-        .plat_entrees, .plat_plats, .plat_desserts
-        {opacity:0.0;}
-        
-    }
-    33%{
-        .plat_entrees{opacity:1.0;}  
-        .plat_plats, .plat_desserts{opacity:0.0;}
-    }
-    66%{
-        .plat_entrees, .plat_plats{opacity:1.0;}
-        .plat_desserts{opacity:0.0;}
-    }
-    100%{
-        .plat_entrees, .plat_plats, .plat_desserts
-            {opacity:1.0;}
-         
-    }
+    0% {opacity:0;}
+          
+    100% {opacity:1;}   
 }
-*/
+
 
 
 
@@ -864,3 +852,4 @@ article{
 
 
 
+    

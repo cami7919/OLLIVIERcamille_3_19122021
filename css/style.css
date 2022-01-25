@@ -465,6 +465,7 @@ body {
 
 .presentation_txt {
   width: 99%;
+  background-color: rgba(247, 244, 244, 0.979);
   border: 1px transparent solid;
   border-radius: 30px;
   margin: auto;
@@ -528,6 +529,9 @@ body {
   padding-top: 40px;
 }
 
+.menu {
+  background-color: rgba(247, 244, 244, 0.979);
+}
 .menu article {
   background-color: white;
   border-radius: 20px;
@@ -599,6 +603,7 @@ article:active .rond > img {
 .restaurant_CTA {
   text-align: center;
   margin: 30px 0px 30px 0px;
+  background-color: rgba(247, 244, 244, 0.979);
 }
 .restaurant_CTA input {
   padding: 0px 35px 0px 35px;

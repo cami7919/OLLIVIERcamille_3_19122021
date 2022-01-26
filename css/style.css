@@ -496,48 +496,12 @@ body {
 }
 
 /* Menu : animation */
-.article {
+article {
   opacity: 0;
-  -webkit-animation: apparition 6s;
-          animation: apparition 6s;
+  -webkit-animation: apparition 3s;
+          animation: apparition 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-.article--1 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.article--2 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.article--3 {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.article--4 {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-.article--5 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.article--6 {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-.article--7 {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-}
-.article--8 {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-}
-.article--9 {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
 }
 
 @-webkit-keyframes apparition {
@@ -557,6 +521,51 @@ body {
     opacity: 1;
   }
 }
+article:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+article:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+article:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+article:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+article:nth-child(5) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+article:nth-child(6) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+article:nth-child(7) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+article:nth-child(8) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+article:nth-child(9) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
 .plat_entrees, .plat_plats, .plat_desserts {
   padding-top: 40px;
 }

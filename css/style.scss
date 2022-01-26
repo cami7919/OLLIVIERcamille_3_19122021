@@ -454,22 +454,46 @@ body{
    
 
 /* Menu : animation */@at-root
-.article{
+article{
     opacity:0;
-    animation:apparition 6s;
-    animation-fill-mode:forwards;
-    @for $i from 1 through 9{
-    &--#{$i}{
-        animation-delay:($i*0.2s);}
-        }}
-
-
+    animation:apparition 3s;
+    animation-fill-mode:forwards;}
+   
+        
 
 @keyframes apparition{
-    0% {opacity:0;}
-          
+    0% {opacity:0;}          
     100% {opacity:1;}   
 }
+
+article:nth-child(1){
+    animation-delay:.2s;}
+
+article:nth-child(2){
+    animation-delay:.4s;}
+
+article:nth-child(3){
+    animation-delay:.6s;}
+
+article:nth-child(4){
+    animation-delay:.8s;}
+    
+article:nth-child(5){
+    animation-delay:.10s;}
+    
+article:nth-child(6){
+    animation-delay:1.2s;}
+
+article:nth-child(7){
+    animation-delay:1.4s;}
+        
+article:nth-child(8){
+    animation-delay:1.6s;}
+        
+article:nth-child(9){
+    animation-delay:1.8s;}
+
+
 
 
 

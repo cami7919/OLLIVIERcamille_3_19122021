@@ -13,17 +13,17 @@ h1 {
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 600;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -48,7 +48,7 @@ p {
   width: 100%;
   position: absolute;
   z-index: 2;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,7 +184,6 @@ p {
   background-color: white;
 }
 
-/* CTA */
 .input_container {
   position: relative;
 }
@@ -222,7 +221,9 @@ p {
   opacity: 0.7;
 }
 
+/* CTA */
 .cta {
+  margin: 0 3% 0 3%;
   text-align: center;
   background-color: rgba(247, 244, 244, 0.979);
   padding-bottom: 50px;
@@ -352,7 +353,7 @@ p {
 .restaurant_carte--img h3 {
   color: #4acbab;
   border: 1px transparent solid;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 2px 7px 2px 7px;
   position: absolute;
   left: 65%;
@@ -368,13 +369,14 @@ p {
   line-height: 12px;
 }
 .restaurant_carte--corps .carte_corps--txt {
+  line-height: 8px;
   padding-left: 20px;
 }
 .restaurant_carte--corps .carte_corps--txt h3 {
   margin-bottom: 10px;
 }
 .restaurant_carte--corps .carte_corps--txt p {
-  font-size: 18px;
+  font-size: 17px;
 }
 .restaurant_carte--corps .carte_corps--coeur {
   padding-right: 5%;
@@ -570,82 +572,182 @@ article:nth-child(9) {
           animation-delay: 1.8s;
 }
 
-.plat_entrees, .plat_plats, .plat_desserts {
-  padding-top: 40px;
+article:nth-child(10) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
-.menu {
-  background-color: rgba(247, 244, 244, 0.979);
-}
-.menu article {
-  background-color: white;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  padding: 0px 20px 0px 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu article .plat {
-  margin-bottom: 6px;
-  font-size: 23px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu article .plat_details {
-  display: flex;
-  justify-content: space-between;
-}
-.menu article .plat_details p, .menu article .plat_details h3 {
-  margin-top: 0px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/*  ---fin de l'animation----*/
+.plat_entrees, .plat_plats, .plat_desserts {
+  padding-top: 40px;
 }
 
 .entrees_titre, .plats_titre, .desserts_titre {
   margin-bottom: 40px;
   margin-top: 70px;
   margin-left: 2%;
-  border-bottom: 3px #99E2D0 solid;
+  border-bottom: 3px #99e2d0 solid;
   width: 45px;
   font-weight: 300;
 }
 
-/*animation des plats*/
-.plat_rond {
+.menu {
+  background-color: rgba(247, 244, 244, 0.979);
+}
+.menu article {
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 0px 0px 0px 20px;
+}
+.menu article .visible {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu article .visible .plat {
+  margin-bottom: 6px;
+  font-size: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu article .visible .plat_details {
   display: flex;
   justify-content: space-between;
 }
-
-.rond {
-  width: 40px;
-  height: 40px;
-  border: 5px solid white;
-  border-radius: 50px;
-  transform: translate(0%, 0%);
+.menu article .visible .plat_details p {
+  margin: 0px 0 15px 0;
+  font-size: 19px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.rond img {
-  position: relative;
-  top: 8px;
-  left: 4px;
+.menu article .visible .plat_details h3 {
+  margin-top: 0px;
+}
+
+/*animation check*/
+article .check {
+  transform: scaleX(1);
+  transition: 1s ease;
+  width: 100%;
+  max-width: 80px;
+  min-width: 25px;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  opacity: 1;
+  overflow: hidden;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article .check .img_v {
+  border-radius: 23px;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  padding: 5px 4px 5px 4px;
+  margin: auto;
   transform: rotate(0deg);
+  transition: 1.3s ease-in-out;
 }
-
-article:active {
-  border-right: 100px solid #99E2D0;
-  transition: 700ms ease-in-out;
-}
-article:active .rond {
-  transform: translate(200%, 60%);
-  border: 5px solid white;
-  transition: 700ms ease-in-out;
-}
-article:active .rond > img {
+article:hover .img_v {
   transform: rotate(720deg);
-  transition: 2s ease;
 }
 
-/*fin de l'animation des plats*/
+/*background-color:$tendre;
+border-bottom-right-radius: 20px;
+border-top-right-radius: 20px;
+margin-right: 0px;
+justify-content:center;
+align-items:center;
+z-index:10;
+color:white;
+font-size:22px;
+flex-wrap:wrap;
+width:0%;
+transition:0.5s ease;*/
+/*animation des plats_version d essai 2
+
+article:nth-child(2){
+    display:flex;
+    justify-content:space-between;
+    padding-right:0;
+    &:hover .check{
+        transform:translateX(0%);
+
+
+    }}
+
+
+
+
+
+
+ .check{
+    transform:translateX(1000%);
+    transition:2s ease-in-out;
+    transition:2s ease;
+    background-color:$tendre;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-right: 0px;
+    text-align:center;
+    width:100px;
+    z-index:3;
+    i{color:white;
+        position:absolute;
+        top:25%;
+        right:20%;
+
+        }
+ }
+*/
+/*animation des plats : ma version qui a marché, puis n'a plus marché
+
+.plat_rond{
+    display:flex;
+    justify-content:space-between;}
+
+.rond{
+    width:40px;
+    height:40px;
+    border: 5px solid white;
+    border-radius:50px;
+    transform:translate(0%, 0%);
+    transition:700ms ease-in-out;
+
+     img{
+        position:relative;
+        top:8px;
+        left:4px;
+        transform:rotate(0deg);
+        transition:2s ease;} 
+    }
+
+
+article{
+    border-right: 0 solid transparent; 
+    transition:700ms ease-in-out;
+    &:active{
+      border-right:100px solid $tendre;       
+    }
+    &:active .rond{
+        transform:translate(200%,60%);}
+
+
+    &:active .rond>img{
+        transform:rotate(720deg);}
+
+
+    }
+
+
+
+fin de l'animation des plats*/
 .restaurant_CTA {
   text-align: center;
   margin: 30px 0px 30px 0px;
@@ -700,7 +802,7 @@ article:active .rond > img {
     width: 100%;
     position: absolute;
     z-index: 2;
-    background-color: #99E2D0;
+    background-color: #99e2d0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -793,7 +895,9 @@ article:active .rond > img {
   }
 
   .header_top {
-    margin: 40px 0px 80px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 50px 0px 80px 0px;
+    background-color: white;
   }
   .header_top img {
     transform: scale(2);
@@ -908,7 +1012,7 @@ article:active .rond > img {
     width: 100%;
     position: absolute;
     z-index: 2;
-    background-color: #99E2D0;
+    background-color: #99e2d0;
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -529,7 +529,7 @@ article:nth-child(10){
      padding:0px 0px 0px 20px;
         .visible{
         width:100%;
-        
+        z-index:1;
         white-space:nowrap;
         overflow:hidden;
         text-overflow:ellipsis;
@@ -557,14 +557,15 @@ article:nth-child(10){
 
 article{ 
 .check{
-    transform:scaleX(1);
-    transition:1s ease;
+    transform:translateX(2500px);
+    opacity:0;
+    transform-origin:right;
+    transition:3s ease-in-out;
     width:100%;
     max-width:80px;
-    min-width:25px;
+    min-width:50px;
     background-color:$tendre;
-    border-radius:0 20px 20px 0;
-    opacity:1;
+    border-radius:0 20px 20px 0;    
     overflow:hidden;
     min-height:80px;
     display:flex;
@@ -577,11 +578,18 @@ article{
         height: 25px;
         padding: 5px 4px 5px 4px;
         margin:auto;
+        opacity:0;        
         transform:rotate(0deg);
         transition:1.3s ease-in-out;}}
     &:hover .img_v{
         transform:rotate(720deg);
-    }}
+        opacity:1;
+        }
+    &:hover .check{
+        transform:translateX(0px);
+    opacity:1;}
+    }
+   
     
 
   

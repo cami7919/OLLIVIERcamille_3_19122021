@@ -604,6 +604,7 @@ article:nth-child(10) {
 }
 .menu article .visible {
   width: 100%;
+  z-index: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -630,14 +631,15 @@ article:nth-child(10) {
 
 /*animation check*/
 article .check {
-  transform: scaleX(1);
-  transition: 1s ease;
+  transform: translateX(2500px);
+  opacity: 0;
+  transform-origin: right;
+  transition: 3s ease-in-out;
   width: 100%;
   max-width: 80px;
-  min-width: 25px;
+  min-width: 50px;
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
-  opacity: 1;
   overflow: hidden;
   min-height: 80px;
   display: flex;
@@ -651,11 +653,17 @@ article .check .img_v {
   height: 25px;
   padding: 5px 4px 5px 4px;
   margin: auto;
+  opacity: 0;
   transform: rotate(0deg);
   transition: 1.3s ease-in-out;
 }
 article:hover .img_v {
   transform: rotate(720deg);
+  opacity: 1;
+}
+article:hover .check {
+  transform: translateX(0px);
+  opacity: 1;
 }
 
 /*background-color:$tendre;

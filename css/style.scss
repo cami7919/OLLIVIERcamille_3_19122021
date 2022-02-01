@@ -336,20 +336,27 @@ font-weight:300}
             &:hover{
                 i:last-child{
                     opacity:1;}
+                i:first-child{
+                    opacity:0;}
+                }
         }}
-        }}
+        }
 
 .carte_corps--coeur{
+    i:first-child{
+        opacity:1;
+        transition:opacity 1s;
+    }
     i:last-child{
         position:absolute;
         top:0;
-        right:46%;
+        right:45%;
         z-index:-1;
-        color:$parme;
+        color:$rose;
         font-weight:bold;
         opacity:0;
-        transition:opacity 3s;
-        transform-origin:50% bottom;}
+        transition:opacity 2s;}
+        
     }
 
 
@@ -438,19 +445,75 @@ body{
         position:absolute;
         top:85%; 
         .coeur{
+            width:15%;
             i{
-            font-size:30px;
+            padding-right:20px;
+            font-size:20px;
             font-weight:normal;
-            color:black;
-            padding-right:45px;
-            opacity:1;
-            z-index:1;
-            right:0%;
-            top:30%;
-            left:85%;
-            }}           
+            }         
+            &:hover{
+                i:first-child{
+                    opacity:1;}
+                .coeur_blanc{
+                    opacity:0;}
+                }
+            }           
     }
-   
+ 
+.presentation_txt{
+    .coeur{
+        i:first-child{
+            opacity:1;
+            transition:opacity 1s;
+            transform:translateY(15%);}
+        i:last-child{
+            transform:translateY(-85%);
+            color:$rose;
+            font-weight:bold;
+            opacity:0;
+            transition:opacity 2s;}
+}   }  
+ 
+ 
+ 
+    /*
+    
+ &--coeur{
+            padding-right:5%;
+            position:relative;
+            top:20px;
+            z-index:1;
+            color:black;
+            font-size:25px;
+            &:hover{
+                i:last-child{
+                    opacity:1;}
+                i:first-child{
+                    opacity:0;}
+                }
+        }}
+        }
+.restaurant_nom{
+    .coeur{
+    i:first-child{
+        opacity:1;
+        transition:opacity 1s;}
+    i:last-child{
+        position:absolute;
+        top:0;
+        
+        z-index:-1;
+        color:$rose;
+        font-weight:bold;
+        opacity:0;
+        transition:opacity 2s;}
+}   }    
+    
+*/
+
+
+
+
 .restaurant_nom{
     font-family:Shrikhand;
     font-size:27px;
@@ -502,7 +565,7 @@ article:nth-child(9){
 article:nth-child(10){
     animation-delay:2s;}
 
-/*  ---fin de l'animation----*/
+  /*fin de l'animation----*/
 
 
 
@@ -557,7 +620,7 @@ article:nth-child(10){
 
 article{ 
 .check{
-    transform:translateX(2500px);
+    transform:translateX(2000px);
     opacity:0;
     transform-origin:right;
     transition:3s ease-in-out;
@@ -707,6 +770,10 @@ fin de l'animation des plats*/
  }
 
 
+
+
+
+
 /*VERSION SMARTPHONE*/
 @media  screen and (min-width:320px){
 
@@ -722,26 +789,57 @@ fin de l'animation des plats*/
 
 
       /*Version smartphone PAGE1*/
+.presentation_txt{
+    width:99%;
+    background-color:lighten($gris, 5%);
+    border:1px transparent solid;
+    border-radius:30px;
+    margin:auto;
+    background-color:lighten($gris,5%);
+    display:flex;
+    justify-content:space-between;
+    padding:25px 5px 25px 5px;
+    position:absolute;
+    top:85%; 
+        .coeur{
+        width:15%;
+            i{
+            padding-right:45px;
+            font-size:30px;
+            font-weight:normal;
+            }         
+            &:hover{
+                .coeur_rose{
+                    opacity:1;}
+                .coeur_blanc{
+                    opacity:0;}
+                }
+            }           
+    }
 
 .presentation_txt{
-    border-radius:38px;
+    border-radius:38px; 
     .restaurant_nom{
-    font-family:Shrikhand;
-    font-size:32px;
-    font-weight:600;
-    padding-left:5%;}
+        font-family:Shrikhand;
+        font-size:32px;
+        font-weight:600;
+        padding-left:5%;}
     .coeur{
-        i{
-        font-size:30px;
-        font-weight:normal;
-        color:black;
-        padding-right:45px;
-        opacity:1;
-        z-index:1;
-        right:0%;
-        top:30%;
-        }}     
-}
+        .coeur_blanc{
+            opacity:1;
+            transition:opacity 1s;}
+        .coeur_rose{
+            transform:translateY(-100%);
+            font-weight:bold;
+            color:$pink;
+            opacity:0;
+            transition:opacity 2s;}
+}       }  
+
+
+
+      
+
       
 
 
@@ -878,24 +976,61 @@ fin de l'animation des plats*/
         transform:scale(1.6);}
 }
 
+   
 .header_presentation{
     position:relative;
     max-width:610px;
-    margin:auto;    
+    margin:auto; 
     .presentation_txt{
-        border-radius:50px;
+    width:99%;
+    background-color:lighten($gris, 5%);
+    border:1px transparent solid;
+    border-radius:50px;
+    margin:auto;
+    background-color:lighten($gris,5%);
+    display:flex;
+    justify-content:space-between;
+    padding:25px 5px 25px 5px;
+    position:absolute;
+    top:85%; 
         .restaurant_nom{
         font-family:Shrikhand;
         font-size:45px;
         font-weight:600;
         padding-left:5%;}
         .coeur{
+        width:15%;
             i{
-            font-size:50px;
             padding-right:45px;
-            top:27%;}}
-    }
-}
+            font-size:50px;
+            font-weight:normal;
+            &:first-child{
+                opacity:1;
+                transition:opacity 1s;
+                transform:translateY(15%);}
+            &:last-child{
+                transform:translateY(-85%);
+                color:$rose;
+                font-weight:bold;
+                opacity:0;
+                transition:opacity 2s;}
+            }         
+         &:hover{
+                i:last-child{
+                    opacity:1;}
+                i:first-child{
+                    opacity:0;}
+}  }   }     }
+
+
+    
+       
+        
+
+
+
+
+
 
 
 

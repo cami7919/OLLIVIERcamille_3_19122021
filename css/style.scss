@@ -475,44 +475,6 @@ body{
 }   }  
  
  
- 
-    /*
-    
- &--coeur{
-            padding-right:5%;
-            position:relative;
-            top:20px;
-            z-index:1;
-            color:black;
-            font-size:25px;
-            &:hover{
-                i:last-child{
-                    opacity:1;}
-                i:first-child{
-                    opacity:0;}
-                }
-        }}
-        }
-.restaurant_nom{
-    .coeur{
-    i:first-child{
-        opacity:1;
-        transition:opacity 1s;}
-    i:last-child{
-        position:absolute;
-        top:0;
-        
-        z-index:-1;
-        color:$rose;
-        font-weight:bold;
-        opacity:0;
-        transition:opacity 2s;}
-}   }    
-    
-*/
-
-
-
 
 .restaurant_nom{
     font-family:Shrikhand;
@@ -522,7 +484,7 @@ body{
     }
    
 
-/* Menu : animation */@at-root
+/* Menu : animation d'apparition */@at-root
 article{
     opacity:0;
     animation:apparition 1.2s;
@@ -598,7 +560,7 @@ article:nth-child(10){
         text-overflow:ellipsis;
             .plat{
             margin-bottom:6px;
-            font-size:22px;
+            font-size:21px;
             overflow: hidden;
             text-overflow: ellipsis;}     
             .plat_details{
@@ -1044,6 +1006,9 @@ fin de l'animation des plats*/
     max-width:800px;
     margin:auto;
     margin-bottom:5%;
+    h2{
+        font-size:22px;
+    }
 }
 
 .entrees_titre, .plats_titre, .desserts_titre

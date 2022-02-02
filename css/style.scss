@@ -36,7 +36,7 @@ $tendre:#99e2d0;
 h1{ font-size:30px;
 font-weight:600;}
 
-h2{ font-size:25px;
+h2{ font-size:22px;
 font-weight: 600;}
 
 h3{font-size: 18px;font-weight:600}
@@ -485,7 +485,7 @@ body{
    
 
 /* Menu : animation d'apparition */@at-root
-article{
+.plat{
     opacity:0;
     animation:apparition 1.2s;
     animation-fill-mode:forwards;}
@@ -497,6 +497,11 @@ article{
     100% {opacity:1;}   
 }
 
+@for $i from 1 to 10{
+.plat-#{$i}  {
+    animation-delay:$i * 0.2s;}
+}
+ /*
 article:nth-child(1){
     animation-delay:.2s;}
 
@@ -527,7 +532,7 @@ article:nth-child(9){
 article:nth-child(10){
     animation-delay:2s;}
 
-  /*fin de l'animation----*/
+ fin de l'animation----*/
 
 
 
@@ -558,7 +563,7 @@ article:nth-child(10){
         white-space:nowrap;
         overflow:hidden;
         text-overflow:ellipsis;
-            .plat{
+            .plat_titre{
             margin-bottom:6px;
             font-size:21px;
             overflow: hidden;
@@ -616,38 +621,6 @@ article{
     }
    
     
-
-  
-
-
-    
-
-    /*background-color:$tendre;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-right: 0px;
-    justify-content:center;
-    align-items:center;
-    z-index:10;
-    color:white;
-    font-size:22px;
-    flex-wrap:wrap;
-    width:0%;
-    transition:0.5s ease;*/
- /*animation des plats_version d essai 2
- 
-article:nth-child(2){
-    display:flex;
-    justify-content:space-between;
-    padding-right:0;
-    &:hover .check{
-        transform:translateX(0%);
-    
-        
-    }}
-    
-
-
 
 
   
@@ -879,15 +852,13 @@ fin de l'animation des plats*/
     }
     
 
-    .input-container 
-    {
-        position: relative;
-        width:40%;
-        margin:auto;
-    }
+   
     
     
     .input-container{
+        position: relative;
+        width:40%;
+        margin:auto;
         input {
         font-size:18px;
         border-radius:25px;
@@ -933,6 +904,7 @@ fin de l'animation des plats*/
     i{
        font-size:35px;
        top:9%; 
+       left:20%;
     }
     img{
         transform:scale(1.6);}

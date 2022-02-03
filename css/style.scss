@@ -501,38 +501,7 @@ body{
 .plat-#{$i}  {
     animation-delay:$i * 0.2s;}
 }
- /*
-article:nth-child(1){
-    animation-delay:.2s;}
-
-article:nth-child(2){
-    animation-delay:.4s;}
-
-article:nth-child(3){
-    animation-delay:.6s;}
-
-article:nth-child(4){
-    animation-delay:.8s;}
-    
-article:nth-child(5){
-    animation-delay:.10s;}
-    
-article:nth-child(6){
-    animation-delay:1.2s;}
-
-article:nth-child(7){
-    animation-delay:1.4s;}
-        
-article:nth-child(8){
-    animation-delay:1.6s;}
-        
-article:nth-child(9){
-    animation-delay:1.8s;}
-
-article:nth-child(10){
-    animation-delay:2s;}
-
- fin de l'animation----*/
+ /*--- fin de l'animation----*/
 
 
 
@@ -565,7 +534,7 @@ article:nth-child(10){
         text-overflow:ellipsis;
             .plat_titre{
             margin-bottom:6px;
-            font-size:21px;
+            font-size:20px;
             overflow: hidden;
             text-overflow: ellipsis;}     
             .plat_details{
@@ -587,11 +556,11 @@ article:nth-child(10){
 
 article{ 
 .check{
-    transform:translateX(2000px);
+    transform:translateX(50%);
     opacity:0;
     transform-origin:right;
-    transition:3s ease-in-out;
-    width:100%;
+    transition:all 1s ease-in-out;
+    width:0%;
     max-width:80px;
     min-width:50px;
     background-color:$tendre;
@@ -607,18 +576,21 @@ article{
         width: 25px;
         height: 25px;
         padding: 5px 4px 5px 4px;
-        margin:auto;
-        opacity:0;        
+        margin:auto;                
         transform:rotate(0deg);
-        transition:1.3s ease-in-out;}}
+        transition: transform 1.3s  0.2s;}
     &:hover .img_v{
-        transform:rotate(720deg);
-        opacity:1;
+        transform:rotate(720deg);        
         }
     &:hover .check{
-        transform:translateX(0px);
-    opacity:1;}
-    }
+        transform:translateX(0px);        
+        width:100%;
+    opacity:1 }
+    
+    &:hover .visible{
+            width:92%;
+        }
+    }}
    
     
 
@@ -642,7 +614,7 @@ article{
        
         }
  }
-*/
+
 
 
  
@@ -978,7 +950,7 @@ fin de l'animation des plats*/
     max-width:800px;
     margin:auto;
     margin-bottom:5%;
-    h2{
+    .plat_titre{
         font-size:22px;
     }
 }

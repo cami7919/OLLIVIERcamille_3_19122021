@@ -666,9 +666,9 @@ article:nth-child(10) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu article .visible .plat {
+.menu article .visible .plat_titre {
   margin-bottom: 6px;
-  font-size: 22px;
+  font-size: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -688,11 +688,11 @@ article:nth-child(10) {
 
 /*animation check*/
 article .check {
-  transform: translateX(2000px);
-  opacity: 0;
+  transform: translateX(50%);
+  opacity:0;
   transform-origin: right;
-  transition: 3s ease-in-out;
-  width: 100%;
+  transition: all 1s  ease-in-out;
+  width: 0%;
   max-width: 80px;
   min-width: 50px;
   background-color: #99e2d0;
@@ -710,17 +710,23 @@ article .check .img_v {
   height: 25px;
   padding: 5px 4px 5px 4px;
   margin: auto;
-  opacity: 0;
+  opacity:0;
+  
   transform: rotate(0deg);
-  transition: 1.3s ease-in-out;
+  transition: transform 1.3s 0.2s;
 }
 article:hover .img_v {
   transform: rotate(720deg);
-  opacity: 1;
+  opacity:1;
 }
 article:hover .check {
-  transform: translateX(0px);
-  opacity: 1;
+  transform: translateX(0px);  
+  width:100%;
+  opacity:1;
+}
+
+article:hover .visible{
+  width:92%;
 }
 
 /*background-color:$tendre;
@@ -1040,7 +1046,7 @@ fin de l'animation des plats*/
     max-width: 450px;
   }
 
-  /* PAGE1  VERSION TABLETTE */
+  /* VERSION TABLETTE____PAGE1   */
   .header_toppage {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -1119,6 +1125,10 @@ fin de l'animation des plats*/
     max-width: 800px;
     margin: auto;
     margin-bottom: 5%;
+  }
+
+  .menu article .plat_titre{
+  font-size:22px;
   }
 
   .entrees_titre, .plats_titre, .desserts_titre {

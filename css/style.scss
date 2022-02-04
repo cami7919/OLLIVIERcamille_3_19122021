@@ -124,8 +124,13 @@ font-weight:300}
 
 
 .input_container{
-    position:relative;
-    input {
+    transform: translateY(-25%);
+    i{
+    transform: translate(50%, 200%);        
+    font-size:20px;
+    padding-left:20px;
+    opacity:0.7;}
+    input{            
     text-align:center;
     width:100%;
     font-size:18px;
@@ -142,16 +147,7 @@ font-weight:300}
     }
   
  
-    .input_container{
-        i{
-        position:absolute;
-        z-index:1;
-        top: 36%;
-        left: 1%;
-        font-size:20px;
-        padding-left:20px;
-        opacity:0.7;}
-      }
+  
 
 
 /* CTA */
@@ -615,55 +611,9 @@ article{
         }
  }
 
+/* fin de l'animation check */
 
 
- 
-
-
-
-
- /*animation des plats : ma version qui a marché, puis n'a plus marché
- 
-.plat_rond{
-    display:flex;
-    justify-content:space-between;}
-
-.rond{
-    width:40px;
-    height:40px;
-    border: 5px solid white;
-    border-radius:50px;
-    transform:translate(0%, 0%);
-    transition:700ms ease-in-out;
-    
-     img{
-        position:relative;
-        top:8px;
-        left:4px;
-        transform:rotate(0deg);
-        transition:2s ease;} 
-    }
-
-
-article{
-    border-right: 0 solid transparent; 
-    transition:700ms ease-in-out;
-    &:active{
-      border-right:100px solid $tendre;       
-    }
-    &:active .rond{
-        transform:translate(200%,60%);}
-        
-         
-    &:active .rond>img{
-        transform:rotate(720deg);}
-        
-        
-    }
-        
-   
-
-fin de l'animation des plats*/
 
 
 
@@ -685,10 +635,9 @@ fin de l'animation des plats*/
 @media  screen and (min-width:320px){
 
 .input_container{
+    transform: translateY(-25%);
     i{
-    position:absolute;
-    top: 36%;
-    left: 15%;
+    transform: translate(160%, 200%);    
     font-size:20px;
     padding-left:20px;
     opacity:0.7;}
@@ -827,10 +776,14 @@ fin de l'animation des plats*/
    
     
     
-    .input-container{
-        position: relative;
+    .input_container{
+        transform: translateY(-25%);
         width:40%;
         margin:auto;
+        i{
+        transform: translate(-20%, 220%);
+        padding-left: 20%;
+        }
         input {
         font-size:18px;
         border-radius:25px;
@@ -838,15 +791,11 @@ fin de l'animation des plats*/
         border-color:$gris;
         border-top:(4px $gris solid);
         height:60px;
-        }
+        box-shadow: 0px 4px 5px rgba(189, 186, 186, 0.979);}
+        
     }
     
-    .input-container > i {
-        position: absolute;
-        top: 35%;
-        left: 0%;
-        padding-left: 20%;
-    }
+    
          
     .fonctionnement_etape{
         width:400px;
@@ -1026,6 +975,13 @@ fin de l'animation des plats*/
     &:hover{
         opacity:0;}
     }
+
+.input_container{
+    transform: translateY(-25%);
+    i{
+    transform: translate(20%, 220%);
+    }
+}
 
 
 }

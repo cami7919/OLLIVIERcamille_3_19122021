@@ -57,7 +57,7 @@ p {
 }
 .loader_lettre {
   color: #484848;
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: 1px;
   margin-bottom: 15px;
   -webkit-animation: flash 1s ease infinite;
@@ -302,7 +302,9 @@ p {
   padding-right: 0px;
 }
 
-
+.fonctionnement_etape:nth-child(2) i{
+  width: 26px;
+  padding-left: 27px;}
 
 
 .fonctionnement_etape:nth-child(4) i {
@@ -327,7 +329,7 @@ p {
   height: 310px;
   border-radius: 30px;
   margin: auto;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
   box-shadow: 5px 7px 5px rgba(214, 201, 201, 0.979);
 }
 .restaurant_carte a {
@@ -455,12 +457,13 @@ li:nth-child(4) {
 }
 .header_toppage img {
   display: block;
-  margin: auto;
+  margin:auto;
 }
 .header_toppage i {
   font-size: 30px;
   font-weight: 600;
   color: black;
+  margin-left:11px;
 }
 
 body {
@@ -518,45 +521,12 @@ body {
   transition: opacity 2s;
 }
 
-/*
 
- &--coeur{
-            padding-right:5%;
-            position:relative;
-            top:20px;
-            z-index:1;
-            color:black;
-            font-size:25px;
-            &:hover{
-                i:last-child{
-                    opacity:1;}
-                i:first-child{
-                    opacity:0;}
-                }
-        }}
-        }
-.restaurant_nom{
-    .coeur{
-    i:first-child{
-        opacity:1;
-        transition:opacity 1s;}
-    i:last-child{
-        position:absolute;
-        top:0;
-
-        z-index:-1;
-        color:$rose;
-        font-weight:bold;
-        opacity:0;
-        transition:opacity 2s;}
-}   }    
-
-*/
 .restaurant_nom {
   font-family: Shrikhand;
-  font-size: 27px;
+  font-size: 28px;
   font-weight: 300;
-  padding-left: 5%;
+  padding-left: 3%;
 }
 
 /* Menu : animation */
@@ -643,7 +613,7 @@ article:nth-child(10) {
 .entrees_titre, .plats_titre, .desserts_titre {
   margin-bottom: 40px;
   margin-top: 70px;
-  margin-left: 2%;
+  margin-left: 4%;
   border-bottom: 3px #99e2d0 solid;
   width: 45px;
   font-weight: 300;
@@ -1055,10 +1025,10 @@ fin de l'animation des plats*/
   .header_toppage i {
     font-size: 35px;
     top: 9%;
-    right:80%;
+   left:15%;
   }
   .header_toppage img {
-    transform: scale(1.6);
+    transform: scale(1.2);
     margin-left:20%;
   }
 
@@ -1070,13 +1040,13 @@ fin de l'animation des plats*/
   .header_presentation .presentation_txt {
     width: 99%;
     background-color: rgba(247, 244, 244, 0.979);
-    border: 1px transparent solid;
+    border: 5px white solid;
     border-radius: 50px;
     margin: auto;
     background-color: rgba(247, 244, 244, 0.979);
     display: flex;
     justify-content: space-between;
-    padding: 25px 5px 25px 5px;
+    padding: 20px 5px 0px 5px;
     position: absolute;
     top: 85%;
   }
@@ -1084,7 +1054,7 @@ fin de l'animation des plats*/
     font-family: Shrikhand;
     font-size: 45px;
     font-weight: 600;
-    padding-left: 5%;
+    padding-left: 4%;
   }
   .header_presentation .presentation_txt .coeur {
     width: 15%;
@@ -1249,5 +1219,17 @@ fin de l'animation des plats*/
   .input_container > i {
     transform: translate(20%, 220%); 
     padding-left: 20%;
+  }
+
+
+  :µ page 1 */
+
+  .header_toppage a{
+    margin-left:20%;}
+
+  .header_toppage i {
+    font-size: 40px;
+    top: 9%;
+   left:35%;
   }
 }/*# sourceMappingURL=style.css.map */

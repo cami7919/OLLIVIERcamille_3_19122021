@@ -69,7 +69,7 @@ font-weight:300}
     align-items:center;
     &_lettre{
         color:#484848;
-        font-size:50px;
+        font-size:40px;
         letter-spacing:1px;
         margin-bottom:15px;
         animation: flash 1s ease infinite;
@@ -243,7 +243,10 @@ font-weight:300}
         padding-right:0px;}
 }
 
-
+.fonctionnement_etape:nth-child(2){
+    i{
+    width: 26px;
+    padding-left: 27px;}}
 
 .fonctionnement_etape:nth-child(4){
     i{
@@ -278,7 +281,7 @@ font-weight:300}
     height: 310px;
     border-radius:30px;
     margin: auto;
-    margin-bottom:15px;
+    margin-bottom:22px;
     box-shadow: 5px 7px 5px darken($gris,10%);
     a {
         text-decoration:none;
@@ -479,9 +482,9 @@ body{
 
 .restaurant_nom{
     font-family:Shrikhand;
-    font-size:27px;
+    font-size:28px;
     font-weight:300;
-    padding-left:5%;
+    padding-left:3%;
     }
    
 
@@ -827,13 +830,16 @@ article{
 .header_toppage{
     margin-top:30px;
     margin-bottom:50px;
+    a{
+        margin-left:20%;
+    }
     i{
        font-size:35px;
        top:9%; 
-       left:20%;
+       left:35%;
     }
     img{
-        transform:scale(1.6);}
+        transform:scale(1.2);}
 }
 
    
@@ -988,6 +994,14 @@ article{
     }
 }
 
+
+.header_toppage{
+     a{
+    margin-left:20%;}
+     i {
+    font-size: 40px;
+    top: 9%;
+    left:35%;}}
 
 }
 

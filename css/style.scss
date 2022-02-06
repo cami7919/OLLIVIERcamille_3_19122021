@@ -96,17 +96,22 @@ font-weight:300}
 }
 
 .loader{
-    animation:loader 3s;
-    animation-fill-mode: forwards;}
+    animation:loader 3.5s;
+    animation-fill-mode: forwards;
+z-index:3;}
     
     
 
 @keyframes loader {
 0%,20%,30%,40%,50%,60%{opacity:1;}
-70%{opacity:0.9;}
-80%{opacity:0.8}
-90%{opacity:0.7;}
-100%{opacity:0}
+70%{opacity:1;
+    z-index:3;}
+80%{opacity:1;
+    z-index:3;}
+90%{opacity:0.7;
+    z-index:3;}
+100%{opacity:0;
+        z-index:0;}
 }
 
 
@@ -181,7 +186,7 @@ font-weight:300}
 }
 
 
-/*  section FONCTIONNEMENT */
+/*  section Fonctionnement */
 
 .fonctionnement{
     padding-top:40px;
@@ -226,14 +231,18 @@ font-weight:300}
             position:relative;
             top:6px;
             h3{
-                width: 80%;}
-            
+                width: 80%;}            
             &:hover{
-            background-color: lighten($gris,20%);
+            background-color: lighten($rose,20%);
             box-shadow:7px 9px 10px darken($gris, 30%);}
         }
     }
 }   
+
+.fonctionnement_etape--txt{
+    &:hover{
+        background-color: lighten($rose,20%);
+        box-shadow:7px 9px 10px darken($gris, 30%);}}
 
 .fonctionnement_etape:nth-child(-1n+3){
     i{
@@ -411,7 +420,7 @@ li:nth-child(4){
 
 
 
-/*PAGE 1 RESTAURANT A LA FRANCAISE*/@at-root
+/*PAGES DE MENU DES RESTAURANTS*/@at-root
 
 .header_toppage{
     margin-bottom:20px;
@@ -419,7 +428,8 @@ li:nth-child(4){
     padding-top:20px;
         img{
             display:block;
-            margin:auto;}
+            margin:auto;
+            }
         i{
             font-size:30px;
             font-weight:600;
@@ -434,6 +444,7 @@ body{
         img{
         width:100%;
         object-fit:cover;
+        height:250px;
         }}
 
 .presentation_txt{
@@ -456,9 +467,9 @@ body{
             font-weight:normal;
             }         
             &:hover{
-                i:first-child{
+                i:last-child{
                     opacity:1;}
-                .coeur_blanc{
+                i:first-child{
                     opacity:0;}
                 }
             }           
@@ -582,19 +593,18 @@ article{
         padding: 5px 4px 5px 4px;
         margin:auto;                
         transform:rotate(0deg);
-        transition: transform 1.3s  0.2s;}
-    &:hover .img_v{
-        transform:rotate(720deg);        
-        }
-    &:hover .check{
-        transform:translateX(0px);        
-        width:100%;
-    opacity:1 }
-    
-    &:hover .visible{
-            width:92%;
-        }
-    }}
+        transition: transform 1.3s  0.2s;}}
+&:hover .img_v{
+    transform:rotate(720deg);        
+    }
+&:hover .check{
+    transform:translateX(0px);        
+    width:100%;
+    opacity:1 }    
+ &:hover .visible{
+    width:92%;
+    }
+ }
    
     
 
@@ -622,10 +632,6 @@ article{
 /* fin de l'animation check */
 
 
-
-
-
- 
  .restaurant_CTA{
      text-align:center;
      margin:30px 0px 30px 0px;
@@ -639,7 +645,7 @@ article{
 
 
 
-/*VERSION SMARTPHONE*/
+/*VERSION SMARTPHONE ----- Page d'accueil*/
 @media  screen and (min-width:320px){
 
 .input_container{
@@ -652,7 +658,7 @@ article{
       }
 
 
-      /*Version smartphone PAGE1*/
+      /*VERSION SMARTPHONE ----- Pages de menu des restaurants*/
 .presentation_txt{
     width:99%;
     background-color:lighten($gris, 5%);
@@ -673,9 +679,9 @@ article{
             font-weight:normal;
             }         
             &:hover{
-                .coeur_rose{
+                i:last-child{
                     opacity:1;}
-                .coeur_blanc{
+                i:first-child{
                     opacity:0;}
                 }
             }           
@@ -689,13 +695,13 @@ article{
         font-weight:600;
         padding-left:5%;}
     .coeur{
-        .coeur_blanc{
+        i:first-child{
             opacity:1;
             transition:opacity 1s;}
-        .coeur_rose{
-            transform:translateY(-100%);
+        i:last-child{
+            transform:translateY(-80%);
             font-weight:bold;
-            color:$pink;
+            color:$rose;
             opacity:0;
             transition:opacity 2s;}
 }       }  
@@ -712,7 +718,7 @@ article{
 
 
 
- /*   VERSION TABLETTE  */
+ /*   VERSION TABLETTE  ----- Page d'accueil  */
  @media screen and (min-width:600px){
 
  /* loading spinner*/
@@ -825,7 +831,7 @@ article{
         max-width:450px;
     }
 
-/* PAGE1  VERSION TABLETTE */@at-root
+/* VERSION TABLETTE  ----- Page de menu des restaurants  */@at-root
 
 .header_toppage{
     margin-top:30px;
@@ -847,6 +853,9 @@ article{
     position:relative;
     max-width:610px;
     margin:auto; 
+    img{
+        height:350px;}
+    }
     .presentation_txt{
     width:99%;
     background-color:lighten($gris, 5%);
@@ -886,20 +895,12 @@ article{
                     opacity:1;}
                 i:first-child{
                     opacity:0;}
-}  }   }     }
+}  }   }     
 
 
     
        
-        
-
-
-
-
-
-
-
-
+  
 
 .plat_entrees{
     padding-top:60px;
@@ -932,7 +933,7 @@ article{
 }
  
 
-/*VERSION DESKTOP */
+/*VERSION DESKTOP ----- Page d'accueil  */
 @media(min-width:992px){
 
 
@@ -994,7 +995,7 @@ article{
     }
 }
 
-
+/*VERSION DESKTOP  ----- Page de menu des restaurants */
 .header_toppage{
      a{
     margin-left:20%;}

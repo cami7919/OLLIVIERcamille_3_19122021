@@ -134,10 +134,11 @@ p {
   }
 }
 .loader {
-  -webkit-animation: loader 3s;
-          animation: loader 3s;
+  -webkit-animation: loader 3.5s;
+          animation: loader 3.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  z-index: 3;
 }
 
 @-webkit-keyframes loader {
@@ -145,16 +146,20 @@ p {
     opacity: 1;
   }
   70% {
-    opacity: 0.9;
+    opacity: 1;
+    z-index: 3;
   }
   80% {
-    opacity: 0.8;
+    opacity: 1;
+    z-index: 3;
   }
   90% {
     opacity: 0.7;
+    z-index: 3;
   }
   100% {
     opacity: 0;
+    z-index: 0;
   }
 }
 
@@ -163,16 +168,20 @@ p {
     opacity: 1;
   }
   70% {
-    opacity: 0.9;
+    opacity: 1;
+    z-index: 3;
   }
   80% {
-    opacity: 0.8;
+    opacity: 1;
+    z-index: 3;
   }
   90% {
     opacity: 0.7;
+    z-index: 3;
   }
   100% {
     opacity: 0;
+    z-index: 0;
   }
 }
 /* header */
@@ -187,8 +196,13 @@ p {
 .input_container {
   transform: translateY(-25%);
 }
+.input_container i {
+  transform: translate(50%, 200%);
+  font-size: 20px;
+  padding-left: 20px;
+  opacity: 0.7;
+}
 .input_container input {
-  
   text-align: center;
   width: 100%;
   font-size: 18px;
@@ -209,13 +223,6 @@ p {
 }
 .input_container input::placeholder {
   color: black;
-  opacity: 0.7;
-}
-
-.input_container i {
-  transform: translate(50%, 200%); 
-  font-size: 20px;
-  padding-left: 20px;
   opacity: 0.7;
 }
 
@@ -245,7 +252,7 @@ p {
   box-shadow: 5px 5px 5px rgba(214, 201, 201, 0.979);
 }
 
-/*  section FONCTIONNEMENT */
+/*  section Fonctionnement */
 .fonctionnement {
   padding-top: 40px;
   padding-bottom: 70px;
@@ -290,8 +297,16 @@ p {
   position: relative;
   top: 6px;
 }
+.fonctionnement .fonctionnement_etape .fonctionnement_etape--txt h3 {
+  width: 80%;
+}
 .fonctionnement .fonctionnement_etape .fonctionnement_etape--txt:hover {
-  background-color: rgba(255, 255, 255, 0.979);
+  background-color: #ffdff6;
+  box-shadow: 7px 9px 10px rgba(170, 143, 143, 0.979);
+}
+
+.fonctionnement_etape--txt:hover {
+  background-color: #ffdff6;
   box-shadow: 7px 9px 10px rgba(170, 143, 143, 0.979);
 }
 
@@ -302,10 +317,10 @@ p {
   padding-right: 0px;
 }
 
-.fonctionnement_etape:nth-child(2) i{
+.fonctionnement_etape:nth-child(2) i {
   width: 26px;
-  padding-left: 27px;}
-
+  padding-left: 27px;
+}
 
 .fonctionnement_etape:nth-child(4) i {
   color: #9356DC;
@@ -449,7 +464,7 @@ li:nth-child(4) {
   padding-bottom: 25px;
 }
 
-/*PAGE 1 RESTAURANT A LA FRANCAISE*/
+/*PAGES DE MENU DES RESTAURANTS*/
 .header_toppage {
   margin-bottom: 20px;
   display: flex;
@@ -457,13 +472,12 @@ li:nth-child(4) {
 }
 .header_toppage img {
   display: block;
-  margin:auto;
+  margin: auto;
 }
 .header_toppage i {
   font-size: 30px;
   font-weight: 600;
   color: black;
-  margin-left:11px;
 }
 
 body {
@@ -477,6 +491,7 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 250px;
 }
 
 .presentation_txt {
@@ -499,7 +514,6 @@ body {
   padding-right: 20px;
   font-size: 20px;
   font-weight: normal;
-    
 }
 .presentation_txt .coeur:hover i:last-child {
   opacity: 1;
@@ -511,7 +525,7 @@ body {
 .presentation_txt .coeur i:first-child {
   opacity: 1;
   transition: opacity 1s;
-  transform:translateY(15%);
+  transform: translateY(15%);
 }
 .presentation_txt .coeur i:last-child {
   transform: translateY(-85%);
@@ -521,7 +535,6 @@ body {
   transition: opacity 2s;
 }
 
-
 .restaurant_nom {
   font-family: Shrikhand;
   font-size: 28px;
@@ -529,8 +542,8 @@ body {
   padding-left: 3%;
 }
 
-/* Menu : animation */
-article {
+/* Menu : animation d'apparition */
+.plat {
   opacity: 0;
   -webkit-animation: apparition 1.2s;
           animation: apparition 1.2s;
@@ -555,57 +568,52 @@ article {
     opacity: 1;
   }
 }
-article:nth-child(1) {
+.plat-1 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-article:nth-child(2) {
+.plat-2 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-article:nth-child(3) {
+.plat-3 {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-article:nth-child(4) {
+.plat-4 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-article:nth-child(5) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+.plat-5 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
-article:nth-child(6) {
+.plat-6 {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
 
-article:nth-child(7) {
+.plat-7 {
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
 }
 
-article:nth-child(8) {
+.plat-8 {
   -webkit-animation-delay: 1.6s;
           animation-delay: 1.6s;
 }
 
-article:nth-child(9) {
+.plat-9 {
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
 }
 
-article:nth-child(10) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-/*fin de l'animation----*/
+/*--- fin de l'animation----*/
 .plat_entrees, .plat_plats, .plat_desserts {
   padding-top: 40px;
 }
@@ -613,7 +621,7 @@ article:nth-child(10) {
 .entrees_titre, .plats_titre, .desserts_titre {
   margin-bottom: 40px;
   margin-top: 70px;
-  margin-left: 4%;
+  margin-left: 2%;
   border-bottom: 3px #99e2d0 solid;
   width: 45px;
   font-weight: 300;
@@ -660,9 +668,9 @@ article:nth-child(10) {
 /*animation check*/
 article .check {
   transform: translateX(50%);
-  opacity:0;
+  opacity: 0;
   transform-origin: right;
-  transition: all 1s  ease-in-out;
+  transition: all 1s ease-in-out;
   width: 0%;
   max-width: 80px;
   min-width: 50px;
@@ -681,115 +689,41 @@ article .check .img_v {
   height: 25px;
   padding: 5px 4px 5px 4px;
   margin: auto;
-  opacity:0;
-  
   transform: rotate(0deg);
   transition: transform 1.3s 0.2s;
 }
 article:hover .img_v {
   transform: rotate(720deg);
-  opacity:1;
 }
 article:hover .check {
-  transform: translateX(0px);  
-  width:100%;
-  opacity:1;
+  transform: translateX(0px);
+  width: 100%;
+  opacity: 1;
+}
+article:hover .visible {
+  width: 92%;
 }
 
-article:hover .visible{
-  width:92%;
+.check {
+  transform: translateX(1000%);
+  transition: 2s ease-in-out;
+  transition: 2s ease;
+  background-color: #99e2d0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-right: 0px;
+  text-align: center;
+  width: 100px;
+  z-index: 3;
+}
+.check i {
+  color: white;
+  position: absolute;
+  top: 25%;
+  right: 20%;
 }
 
-/*background-color:$tendre;
-border-bottom-right-radius: 20px;
-border-top-right-radius: 20px;
-margin-right: 0px;
-justify-content:center;
-align-items:center;
-z-index:10;
-color:white;
-font-size:22px;
-flex-wrap:wrap;
-width:0%;
-transition:0.5s ease;*/
-/*animation des plats_version d essai 2
-
-article:nth-child(2){
-    display:flex;
-    justify-content:space-between;
-    padding-right:0;
-    &:hover .check{
-        transform:translateX(0%);
-
-
-    }}
-
-
-
-
-
-
- .check{
-    transform:translateX(1000%);
-    transition:2s ease-in-out;
-    transition:2s ease;
-    background-color:$tendre;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-right: 0px;
-    text-align:center;
-    width:100px;
-    z-index:3;
-    i{color:white;
-        position:absolute;
-        top:25%;
-        right:20%;
-
-        }
- }
-*/
-/*animation des plats : ma version qui a marché, puis n'a plus marché
-
-.plat_rond{
-    display:flex;
-    justify-content:space-between;}
-
-.rond{
-    width:40px;
-    height:40px;
-    border: 5px solid white;
-    border-radius:50px;
-    transform:translate(0%, 0%);
-    transition:700ms ease-in-out;
-
-     img{
-        position:relative;
-        top:8px;
-        left:4px;
-        transform:rotate(0deg);
-        transition:2s ease;} 
-    }
-
-
-article{
-    border-right: 0 solid transparent; 
-    transition:700ms ease-in-out;
-    &:active{
-      border-right:100px solid $tendre;       
-    }
-    &:active .rond{
-        transform:translate(200%,60%);}
-
-
-    &:active .rond>img{
-        transform:rotate(720deg);}
-
-
-    }
-
-
-
-fin de l'animation des plats*/
+/* fin de l'animation check */
 .restaurant_CTA {
   text-align: center;
   margin: 30px 0px 30px 0px;
@@ -799,16 +733,19 @@ fin de l'animation des plats*/
   padding: 0px 35px 0px 35px;
 }
 
-/*VERSION SMARTPHONE*/
+/*VERSION SMARTPHONE ----- Page d'accueil*/
 @media screen and (min-width: 320px) {
+  .input_container {
+    transform: translateY(-25%);
+  }
   .input_container i {
-    transform: translate(160%, 200%); 
+    transform: translate(160%, 200%);
     font-size: 20px;
     padding-left: 20px;
     opacity: 0.7;
   }
 
-  /*Version smartphone PAGE1*/
+  /*VERSION SMARTPHONE ----- Pages de menu des restaurants*/
   .presentation_txt {
     width: 99%;
     background-color: rgba(247, 244, 244, 0.979);
@@ -828,8 +765,7 @@ fin de l'animation des plats*/
   .presentation_txt .coeur i {
     padding-right: 45px;
     font-size: 30px;
-    
-    
+    font-weight: normal;
   }
   .presentation_txt .coeur:hover i:last-child {
     opacity: 1;
@@ -850,17 +786,16 @@ fin de l'animation des plats*/
   .presentation_txt .coeur i:first-child {
     opacity: 1;
     transition: opacity 1s;
-    transform: translateY(15%);
   }
   .presentation_txt .coeur i:last-child {
+    transform: translateY(-80%);
     font-weight: bold;
-    color:#FF79DA;
+    color: #FF79DA;
     opacity: 0;
     transition: opacity 2s;
-    transform: translateY(-85%);
   }
 }
-/*   VERSION TABLETTE  */
+/*   VERSION TABLETTE  ----- Page d'accueil  */
 @media screen and (min-width: 600px) {
   /* loading spinner*/
   .accueil {
@@ -979,7 +914,10 @@ fin de l'animation des plats*/
     width: 40%;
     margin: auto;
   }
-
+  .input_container i {
+    transform: translate(-20%, 220%);
+    padding-left: 20%;
+  }
   .input_container input {
     font-size: 18px;
     border-radius: 25px;
@@ -988,11 +926,6 @@ fin de l'animation des plats*/
     border-top: 4px rgba(236, 230, 230, 0.979) solid;
     height: 60px;
     box-shadow: 0px 4px 5px rgba(189, 186, 186, 0.979);
-  }
-
-  .input_container > i {
-    transform: translate(-20%, 220%); 
-    padding-left: 20%;
   }
 
   .fonctionnement_etape {
@@ -1014,22 +947,21 @@ fin de l'animation des plats*/
     max-width: 450px;
   }
 
-  /* VERSION TABLETTE____PAGE1   */
+  /* VERSION TABLETTE  ----- Page de menu des restaurants  */
   .header_toppage {
     margin-top: 30px;
     margin-bottom: 50px;
   }
-  .header_toppage a{
-    margin-left:15%;}
-
+  .header_toppage a {
+    margin-left: 20%;
+  }
   .header_toppage i {
     font-size: 35px;
     top: 9%;
-   left:15%;
+    left: 35%;
   }
   .header_toppage img {
     transform: scale(1.2);
-    margin-left:20%;
   }
 
   .header_presentation {
@@ -1037,52 +969,54 @@ fin de l'animation des plats*/
     max-width: 610px;
     margin: auto;
   }
-  .header_presentation .presentation_txt {
+  .header_presentation img {
+    height: 350px;
+  }
+
+  .presentation_txt {
     width: 99%;
     background-color: rgba(247, 244, 244, 0.979);
-    border: 5px white solid;
+    border: 1px transparent solid;
     border-radius: 50px;
     margin: auto;
     background-color: rgba(247, 244, 244, 0.979);
     display: flex;
     justify-content: space-between;
-    padding: 20px 5px 0px 5px;
+    padding: 25px 5px 25px 5px;
     position: absolute;
     top: 85%;
   }
-  .header_presentation .presentation_txt .restaurant_nom {
+  .presentation_txt .restaurant_nom {
     font-family: Shrikhand;
     font-size: 45px;
     font-weight: 600;
-    padding-left: 4%;
+    padding-left: 5%;
   }
-  .header_presentation .presentation_txt .coeur {
+  .presentation_txt .coeur {
     width: 15%;
   }
-  .header_presentation .presentation_txt .coeur i {
+  .presentation_txt .coeur i {
     padding-right: 45px;
     font-size: 50px;
     font-weight: normal;
-    
   }
-  .header_presentation .presentation_txt .coeur:hover i:last-child {
-    opacity: 1;
-  }
-  .header_presentation .presentation_txt .coeur:hover i:first-child {
-    opacity: 0;
-  }
-
   .presentation_txt .coeur i:first-child {
     opacity: 1;
     transition: opacity 1s;
     transform: translateY(15%);
   }
   .presentation_txt .coeur i:last-child {
+    transform: translateY(-85%);
+    color: #FF79DA;
     font-weight: bold;
     opacity: 0;
     transition: opacity 2s;
-    color:#FF79DA;
-    transform: translateY(-85%);
+  }
+  .presentation_txt .coeur:hover i:last-child {
+    opacity: 1;
+  }
+  .presentation_txt .coeur:hover i:first-child {
+    opacity: 0;
   }
 
   .plat_entrees {
@@ -1094,9 +1028,8 @@ fin de l'animation des plats*/
     margin: auto;
     margin-bottom: 5%;
   }
-
-  .menu article .visible .plat_titre{
-  font-size:22px;
+  .menu article .plat_titre {
+    font-size: 22px;
   }
 
   .entrees_titre, .plats_titre, .desserts_titre {
@@ -1111,7 +1044,7 @@ fin de l'animation des plats*/
     transform: scale(1.3);
   }
 }
-/*VERSION DESKTOP */
+/*VERSION DESKTOP ----- Page d'accueil  */
 @media (min-width: 992px) {
   /* loading spinner*/
   .accueil {
@@ -1216,20 +1149,20 @@ fin de l'animation des plats*/
     opacity: 0;
   }
 
-  .input_container > i {
-    transform: translate(20%, 220%); 
-    padding-left: 20%;
+  .input_container {
+    transform: translateY(-25%);
+  }
+  .input_container i {
+    transform: translate(20%, 220%);
   }
 
-
-  :µ page 1 */
-
-  .header_toppage a{
-    margin-left:20%;}
-
+  /*VERSION DESKTOP  ----- Page de menu des restaurants */
+  .header_toppage a {
+    margin-left: 20%;
+  }
   .header_toppage i {
     font-size: 40px;
     top: 9%;
-   left:35%;
+    left: 35%;
   }
 }/*# sourceMappingURL=style.css.map */

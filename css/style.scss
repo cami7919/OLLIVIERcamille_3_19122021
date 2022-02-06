@@ -859,13 +859,13 @@ article{
     .presentation_txt{
     width:99%;
     background-color:lighten($gris, 5%);
-    border:1px transparent solid;
+    border:5px white solid;
     border-radius:50px;
     margin:auto;
     background-color:lighten($gris,5%);
     display:flex;
     justify-content:space-between;
-    padding:25px 5px 25px 5px;
+    padding:25px 5px 0px 5px;
     position:absolute;
     top:85%; 
         .restaurant_nom{

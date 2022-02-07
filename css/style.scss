@@ -1,21 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-
-
 /*version inférieure à 320 px*/
 
 /*communs*/
@@ -50,7 +33,7 @@ font-weight:300}
 
 
 
-/* loading spinner*/
+/* loader*/
 .accueil{
     height:100%;
     width:100%;
@@ -96,7 +79,7 @@ font-weight:300}
 }
 
 .loader{
-    animation:loader 3.5s;
+    animation:loader 3s;
     animation-fill-mode: forwards;
 z-index:3;}
     
@@ -111,11 +94,11 @@ z-index:3;}
 90%{opacity:0.7;
     z-index:3;}
 100%{opacity:0;
-        z-index:0;}
+        z-index:-1;}
 }
 
 
-/* header */@at-root
+/* Header */@at-root
 .header_top
 {
     display:flex;
@@ -155,7 +138,7 @@ z-index:3;}
   
 
 
-/* CTA */
+/* Section CTA */
 .cta
 { 
     margin :0 3% 0 3%;
@@ -420,7 +403,7 @@ li:nth-child(4){
 
 
 
-/*PAGES DE MENU DES RESTAURANTS*/@at-root
+/*PAGES DE MENU */@at-root
 
 .header_toppage{
     margin-bottom:20px;
@@ -500,22 +483,75 @@ body{
    
 
 /* Menu : animation d'apparition */@at-root
-.plat{
-    opacity:0;
-    animation:apparition 1.2s;
-    animation-fill-mode:forwards;}
-   
-        
 
-@keyframes apparition{
+
+.plat-1 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 0.2s;
+            animation: apparition 1.2s forwards 0.2s;
+  }
+.plat-2 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 0.4s;
+            animation: apparition 1.2s forwards 0.4s;
+  }
+.plat-3 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 0.6s;
+            animation: apparition 1.2s forwards 0.6s;
+  }
+.plat-4 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 0.8s;
+            animation: apparition 1.2s forwards 0.8s;
+  }
+.plat-5 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 1s;
+            animation: apparition 1.2s forwards 1s;
+  }
+.plat-6 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 1.2s;
+            animation: apparition 1.2s forwards 1.2s;
+  }
+.plat-7 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 1.4s;
+            animation: apparition 1.2s forwards 1.4s;
+  }
+.plat-8 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 1.6s;
+            animation: apparition 1.2s forwards 1.6s;
+  }
+.plat-9 {
+    opacity: 0;
+    -webkit-animation: apparition 1.2s forwards 1.8s;
+            animation: apparition 1.2s forwards 1.8s;
+  }
+.plat-10 {
+    opacity: 0;
+    -webkit-animation: apparition 2s forwards 2s;
+            animation: apparition 2s forwards 2s;
+  }
+
+  @keyframes apparition{
     0% {opacity:0;}          
     100% {opacity:1;}   
 }
 
-@for $i from 1 to 10{
+/*
+.plat{
+    opacity:0;
+    animation:apparition 1.2s forwards 0.2s;
+    }
+  @for $i from 1 to 10{
 .plat-#{$i}  {
     animation-delay:$i * 0.2s;}
 }
+*/
+
  /*--- fin de l'animation----*/
 
 
@@ -606,10 +642,7 @@ article{
     }
  }
    
-    
 
-
-  
  .check{
     transform:translateX(1000%);
     transition:2s ease-in-out;
@@ -624,11 +657,8 @@ article{
     i{color:white;
         position:absolute;
         top:25%;
-        right:20%;
-       
-        }
+        right:20%;}         
  }
-
 /* fin de l'animation check */
 
 
@@ -658,7 +688,7 @@ article{
       }
 
 
-      /*VERSION SMARTPHONE ----- Pages de menu des restaurants*/
+      /*VERSION SMARTPHONE ----- Pages de menu*/
 .presentation_txt{
     width:99%;
     background-color:lighten($gris, 5%);
@@ -707,12 +737,6 @@ article{
 }       }  
 
 
-
-      
-
-      
-
-
     }
 
 
@@ -721,7 +745,7 @@ article{
  /*   VERSION TABLETTE  ----- Page d'accueil  */
  @media screen and (min-width:600px){
 
- /* loading spinner*/
+ /* loader*/
  .accueil{
     height:100%;
     width:100%;
@@ -731,7 +755,7 @@ article{
     height:100%;
     width:100%;
     position:absolute;
-    z-index:2;
+    z-index:3;
     background-color:$tendre;
     display:flex;
     flex-direction:row;
@@ -766,7 +790,7 @@ article{
 }
 
 .loader{
-    animation:loader 3.5s;
+    animation:loader 3s;
     animation-fill-mode: forwards;
 z-index:3;}
     
@@ -781,19 +805,9 @@ z-index:3;}
 90%{opacity:0.7;
     z-index:3;}
 100%{opacity:0;
-        z-index:0;}
+        z-index:-1;}
 }
-
-
-/*
-.loader{
-    opacity:1;
-    transition:opacity 3s;
-    &:hover{
-        opacity:0;}
-    }
-*/
-
+/* fin du loader */
 
 
 
@@ -807,52 +821,50 @@ z-index:3;}
         transform:scale(2);}
     }
     
-
    
     
-    
-    .input_container{
-        transform: translateY(-25%);
-        width:40%;
-        margin:auto;
-        i{
-        transform: translate(-20%, 220%);
-        padding-left: 20%;
-        }
-        input {
-        font-size:18px;
-        border-radius:25px;
-        border-style:none;
-        border-color:$gris;
-        border-top:(4px $gris solid);
-        height:60px;
-        box-shadow: 0px 4px 5px rgba(189, 186, 186, 0.979);}
-        
+.input_container{
+    transform: translateY(-25%);
+    width:40%;
+    margin:auto;
+    i{
+    transform: translate(-20%, 220%);
+    padding-left: 20%;
     }
+    input {
+    font-size:18px;
+    border-radius:25px;
+    border-style:none;
+    border-color:$gris;
+    border-top:(4px $gris solid);
+    height:60px;
+    box-shadow: 0px 4px 5px rgba(189, 186, 186, 0.979);}
+}
     
     
          
-    .fonctionnement_etape{
-        width:400px;
-        margin:auto;
-    }
+.fonctionnement_etape{
+    width:400px;
+    margin:auto;
+}
     
-    .fonctionnement h2,.restaurants h2{
-       
-        margin-left:40%;
-        margin-bottom:50px;
-    } 
+.fonctionnement h2,.restaurants h2{
+    margin-left:40%;
+    margin-bottom:50px;
+} 
     
-    .conteneur_restaurants {
-        display:flex;
-        flex-wrap:wrap;
-    }
+.conteneur_restaurants {
+    display:flex;
+    flex-wrap:wrap;
+}
     
-    .restaurant_carte{
-        max-width:450px;
-    }
+.restaurant_carte{
+    max-width:450px;
+}
 
-/* VERSION TABLETTE  ----- Page de menu des restaurants  */@at-root
+
+
+/* VERSION TABLETTE  ----- Page de menu  */@at-root
 
 .header_toppage{
     margin-top:30px;
@@ -919,9 +931,6 @@ z-index:3;}
 }  }   }     
 
 
-    
-       
-  
 
 .plat_entrees{
     padding-top:60px;
@@ -958,7 +967,7 @@ z-index:3;}
 @media(min-width:992px){
 
 
-    /* loading spinner*/
+    /* loader*/
 .accueil{
     height:100%;
     width:100%;
@@ -968,7 +977,7 @@ z-index:3;}
     height:100%;
     width:100%;
     position:absolute;
-    z-index:2;
+    z-index:3;
     background-color:$tendre;
     display:flex;
     flex-direction:row;
@@ -1003,9 +1012,9 @@ z-index:3;}
 }
 
 .loader{
-    animation:loader 3.5s;
+    animation:loader 3s;
     animation-fill-mode: forwards;
-z-index:3;}
+    z-index:3;}
     
     
 
@@ -1018,7 +1027,7 @@ z-index:3;}
 90%{opacity:0.7;
     z-index:3;}
 100%{opacity:0;
-        z-index:0;}
+        z-index:-1;}
 }
 
 
@@ -1031,7 +1040,8 @@ z-index:3;}
     }
 }
 
-/*VERSION DESKTOP  ----- Page de menu des restaurants */
+/*VERSION DESKTOP  ----- Pages de menu */
+
 .header_toppage{
      a{
     margin-left:20%;}

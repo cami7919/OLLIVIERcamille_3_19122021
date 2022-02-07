@@ -365,14 +365,16 @@ footer{
     background-color: darken($gris, 70%);
     margin-top:80px;
     a{
-        text-decoration:none}
+        text-decoration:none;
+        color:white;}
+    
     i{
         font-size:20px;
-        padding-right:0px}  
+        padding-right:0px;}  
     img{
         margin :35px 0px 0px 40px;
         filter : invert(100%);
-        -webkit-filter:invert(100%)}
+        -webkit-filter:invert(100%);}
     ul{
         line-height:1px;
         white-space:nowrap;
@@ -420,7 +422,7 @@ li:nth-child(4){
     }
 
 body{
-    background-color:lighten($gris,5%)}
+    background-color:lighten($gris,5%);}
 
 .header_presentation{
     position:relative;

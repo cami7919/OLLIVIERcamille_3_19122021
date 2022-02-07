@@ -431,9 +431,12 @@ footer {
   background-color: rgba(62, 47, 47, 0.979);
   margin-top: 80px;
 }
-footer a {
+footer  a {
   text-decoration: none;
-}
+  color:white;}
+
+
+
 footer i {
   font-size: 20px;
   padding-right: 0px;

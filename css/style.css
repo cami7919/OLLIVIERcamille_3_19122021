@@ -37,7 +37,7 @@ p {
   font-weight: 300;
 }
 
-/* loading spinner*/
+/* loader*/
 .accueil {
   height: 100%;
   width: 100%;
@@ -54,6 +54,10 @@ p {
   align-items: center;
   justify-content: center;
   align-items: center;
+  -webkit-animation: loader 3s;
+          animation: loader 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .loader_lettre {
   color: #484848;
@@ -133,14 +137,6 @@ p {
     text-shadow: 0 0 7px #FF79DA;
   }
 }
-.loader {
-  -webkit-animation: loader 3.5s;
-          animation: loader 3.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  z-index: 3;
-}
-
 @-webkit-keyframes loader {
   0%, 20%, 30%, 40%, 50%, 60% {
     opacity: 1;
@@ -159,10 +155,9 @@ p {
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
   }
 }
-
 @keyframes loader {
   0%, 20%, 30%, 40%, 50%, 60% {
     opacity: 1;
@@ -181,10 +176,10 @@ p {
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
   }
 }
-/* header */
+/* Header */
 .header_top {
   display: flex;
   width: 100%;
@@ -226,7 +221,7 @@ p {
   opacity: 0.7;
 }
 
-/* CTA */
+/* Section CTA */
 .cta {
   margin: 0 3% 0 3%;
   text-align: center;
@@ -431,12 +426,10 @@ footer {
   background-color: rgba(62, 47, 47, 0.979);
   margin-top: 80px;
 }
-footer  a {
+footer a {
   text-decoration: none;
-  color:white;}
-
-
-
+  color: white;
+}
 footer i {
   font-size: 20px;
   padding-right: 0px;
@@ -467,7 +460,7 @@ li:nth-child(4) {
   padding-bottom: 25px;
 }
 
-/*PAGES DE MENU DES RESTAURANTS*/
+/*PAGES DE MENU */
 .header_toppage {
   margin-bottom: 20px;
   display: flex;
@@ -755,7 +748,7 @@ article:hover .visible {
     opacity: 0.7;
   }
 
-  /*VERSION SMARTPHONE ----- Pages de menu des restaurants*/
+  /*VERSION SMARTPHONE ----- Pages de menu*/
   .presentation_txt {
     width: 99%;
     background-color: rgba(247, 244, 244, 0.979);
@@ -807,7 +800,7 @@ article:hover .visible {
 }
 /*   VERSION TABLETTE  ----- Page d'accueil  */
 @media screen and (min-width: 600px) {
-  /* loading spinner*/
+  /* loader*/
   .accueil {
     height: 100%;
     width: 100%;
@@ -817,12 +810,16 @@ article:hover .visible {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background-color: #99e2d0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    -webkit-animation: loader 3s;
+            animation: loader 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   .loader_lettre {
     color: #484848;
@@ -902,14 +899,6 @@ article:hover .visible {
       text-shadow: 0 0 7px #FF79DA;
     }
   }
-  .loader {
-    -webkit-animation: loader 3.5s;
-            animation: loader 3.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    z-index: 3;
-  }
-
   @-webkit-keyframes loader {
     0%, 20%, 30%, 40%, 50%, 60% {
       opacity: 1;
@@ -928,10 +917,9 @@ article:hover .visible {
     }
     100% {
       opacity: 0;
-      z-index: 0;
+      z-index: -1;
     }
   }
-
   @keyframes loader {
     0%, 20%, 30%, 40%, 50%, 60% {
       opacity: 1;
@@ -950,17 +938,10 @@ article:hover .visible {
     }
     100% {
       opacity: 0;
-      z-index: 0;
+      z-index: -1;
     }
   }
-  /*
-  .loader{
-      opacity:1;
-      transition:opacity 3s;
-      &:hover{
-          opacity:0;}
-      }
-  */
+  /* fin du loader */
   .header_top {
     margin: 0px 0px 0px 0px;
     padding: 50px 0px 80px 0px;
@@ -1008,7 +989,7 @@ article:hover .visible {
     max-width: 450px;
   }
 
-  /* VERSION TABLETTE  ----- Page de menu des restaurants  */
+  /* VERSION TABLETTE  ----- Page de menu  */
   .header_toppage {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -1107,7 +1088,7 @@ article:hover .visible {
 }
 /*VERSION DESKTOP ----- Page d'accueil  */
 @media (min-width: 992px) {
-  /* loading spinner*/
+  /* loader*/
   .accueil {
     height: 100%;
     width: 100%;
@@ -1117,12 +1098,16 @@ article:hover .visible {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background-color: #99e2d0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    -webkit-animation: loader 3s;
+            animation: loader 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   .loader_lettre {
     color: #484848;
@@ -1202,14 +1187,6 @@ article:hover .visible {
       text-shadow: 0 0 7px #FF79DA;
     }
   }
-  .loader {
-    -webkit-animation: loader 3.5s;
-            animation: loader 3.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    z-index: 3;
-  }
-
   @-webkit-keyframes loader {
     0%, 20%, 30%, 40%, 50%, 60% {
       opacity: 1;
@@ -1228,10 +1205,9 @@ article:hover .visible {
     }
     100% {
       opacity: 0;
-      z-index: 0;
+      z-index: -1;
     }
   }
-
   @keyframes loader {
     0%, 20%, 30%, 40%, 50%, 60% {
       opacity: 1;
@@ -1250,7 +1226,7 @@ article:hover .visible {
     }
     100% {
       opacity: 0;
-      z-index: 0;
+      z-index: -1;
     }
   }
   .input_container {
@@ -1260,7 +1236,7 @@ article:hover .visible {
     transform: translate(20%, 220%);
   }
 
-  /*VERSION DESKTOP  ----- Page de menu des restaurants */
+  /*VERSION DESKTOP  ----- Pages de menu */
   .header_toppage a {
     margin-left: 20%;
   }
@@ -1268,5 +1244,9 @@ article:hover .visible {
     font-size: 40px;
     top: 9%;
     left: 35%;
+  }
+
+  .entrees_titre, .plats_titre, .desserts_titre {
+    margin-left: 25%;
   }
 }/*# sourceMappingURL=style.css.map */
